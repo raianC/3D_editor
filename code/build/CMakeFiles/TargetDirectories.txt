@@ -1,0 +1,3 @@
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/main.dir
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/rebuild_cache.dir
