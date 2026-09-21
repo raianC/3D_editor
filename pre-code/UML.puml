@@ -1,0 +1,144 @@
+@startuml
+title 3D Editor - Class Diagram
+
+skinparam classAttributeIconSize 0
+skinparam shadowing false
+
+
+
+package "3D Editor" {
+
+    class Editor3D {
+        - scene : Scene*
+        - camera : Camera*
+        + createObject() : Object3D*
+        + deleteObject( Object3D*) : void
+        + selectObject( Object3D*) : void
+        + render() : void
+    }
+
+    class Scene {
+        - objects : vector<Object3D*>
+        + addObject( Object3D*) : void
+        + removeObject(Object3D*) : void
+        + getObjects() : vector<Object3D*>
+    }
+
+    class Object3D {
+        - name : string
+        - mesh : Mesh*
+        - transform : Transform
+        + getMesh() : Mesh*
+        + getTransform() : Transform&
+        + setMesh( Mesh*) : void
+    }
+
+    class Transform {
+        - position : Vector3
+        - rotation : Vector3
+        - scale : Vector3
+        + translate( Vector3) : void
+        + rotate( Vector3) : void
+        + scale( Vector3) : void
+
+    }
+
+    class Camera {
+        - position : Vector3
+        - rotation : Vector3
+        - fov : float
+        - nearPlane : float
+        - farPlane : float
+        + move( Vector3) : void
+        + rotate( Vector3) : void
+    }
+
+    Editor3D  -->  Scene 
+    Editor3D  -->  Camera 
+
+    Scene *--  Object3D 
+
+    Object3D  *--  Transform 
+    Object3D  -->  Mesh 
+}
+
+
+
+
+package "HalfEdge" {
+
+    class Mesh {
+        - vertices : vector<Vertex*>
+        - edges : vector<Edge*>
+        - halfEdges : vector<HalfEdge*>
+        - faces : vector<Face*>
+
+        + addVertex() : Vertex
+        + addEdge() : Edge
+        + addFace() : Face
+        + removeVertex( Vertex*) 
+        + removeEdge( Edge*) 
+        + removeFace( Face*) 
+    }
+
+    class Vertex {
+        - position : Vector3
+        - halfEdge : HalfEdge*
+
+        + getPosition() : Vector3
+        + setPosition( Vector3) : void
+        + getHalfEdge() : HalfEdge*
+    }
+
+    class Edge {
+        - halfEdge : HalfEdge*
+
+        + getHalfEdge() : HalfEdge*
+    }
+
+    class HalfEdge {
+        - origin : Vertex*
+        - twin : HalfEdge*
+        - next : HalfEdge*
+        - prev : HalfEdge*
+        - edge : Edge*
+        - face : Face*
+
+        + getOrigin() : Vertex*
+        + getTwin() : HalfEdge*
+        + getNext() : HalfEdge*
+        + getPrev() : HalfEdge*
+        + getEdge() : Edge*
+        + getFace() : Face*
+    }
+
+    class Face {
+        - halfEdge : HalfEdge*
+
+        + getHalfEdge() : HalfEdge*
+        + getVertices() : vector<Vertex*>
+    }
+
+    
+
+    Mesh  *--  Vertex 
+    Mesh  *--  Edge 
+    Mesh  *--  HalfEdge 
+    Mesh  *--  Face 
+
+
+
+    Edge  -->  HalfEdge 
+
+    HalfEdge  -->  Vertex 
+
+    HalfEdge  -->  Edge 
+    HalfEdge  -->  Face 
+
+    Face  -->  HalfEdge 
+}
+
+
+
+
+@enduml
