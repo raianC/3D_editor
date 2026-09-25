@@ -1,0 +1,4 @@
+//Scene.hpp
+class Scene {
+    
+};
