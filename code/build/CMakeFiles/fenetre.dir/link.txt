@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfenetre.a CMakeFiles/fenetre.dir/src/fenetre.cpp.o
+/usr/bin/ranlib libfenetre.a

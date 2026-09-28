@@ -1,0 +1,2 @@
+/usr/bin/ar qc libHalfEdge.a CMakeFiles/HalfEdge.dir/src/HalfEdge.cpp.o
+/usr/bin/ranlib libHalfEdge.a

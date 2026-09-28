@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named glad
+
+# Build rule for target.
+glad: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad
+.PHONY : glad
+
+# fast build rule for target.
+glad/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
+.PHONY : glad/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -129,29 +142,53 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+src/fenetre.o: src/fenetre.cpp.o
+.PHONY : src/fenetre.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/fenetre.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/fenetre.cpp.o
+.PHONY : src/fenetre.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/fenetre.i: src/fenetre.cpp.i
+.PHONY : src/fenetre.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/fenetre.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/fenetre.cpp.i
+.PHONY : src/fenetre.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/fenetre.s: src/fenetre.cpp.s
+.PHONY : src/fenetre.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/fenetre.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/fenetre.cpp.s
+.PHONY : src/fenetre.cpp.s
+
+src/glad.o: src/glad.c.o
+.PHONY : src/glad.o
+
+# target to build an object file
+src/glad.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/src/glad.c.o
+.PHONY : src/glad.c.o
+
+src/glad.i: src/glad.c.i
+.PHONY : src/glad.i
+
+# target to preprocess a source file
+src/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/src/glad.c.i
+.PHONY : src/glad.c.i
+
+src/glad.s: src/glad.c.s
+.PHONY : src/glad.s
+
+# target to generate assembly for a file
+src/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/src/glad.c.s
+.PHONY : src/glad.c.s
 
 # Help Target
 help:
@@ -161,10 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... glad"
 	@echo "... main"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/fenetre.o"
+	@echo "... src/fenetre.i"
+	@echo "... src/fenetre.s"
+	@echo "... src/glad.o"
+	@echo "... src/glad.i"
+	@echo "... src/glad.s"
 .PHONY : help
 
 

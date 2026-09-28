@@ -1,0 +1,2 @@
+/usr/bin/ar qc libFace.a CMakeFiles/Face.dir/src/Face.cpp.o
+/usr/bin/ranlib libFace.a

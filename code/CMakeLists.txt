@@ -9,8 +9,19 @@ endif()
 
 set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 
+
 include_directories(include/)
 
 
+#add_library(Face src/Face.cpp)
+#add_library(Editor3D src/Editor3D.cpp)
+#add_library(Mesh src/Mesh.cpp)
+#add_library(Scene src/Scene.cpp)
+#add_library(Vertex src/Vertex.cpp)
+#add_library(HalfEdge src/HalfEdge)
+add_library(glad src/glad.c)
 
-add_executable(main src/main.cpp)
+add_executable(main src/fenetre.cpp)
+
+target_link_libraries(main glfw glad)
+#target_link_libraries(main Face Editor3D Mesh Scene Vertex glad fenetre)

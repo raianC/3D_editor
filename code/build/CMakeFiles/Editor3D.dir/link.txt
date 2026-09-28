@@ -1,0 +1,2 @@
+/usr/bin/ar qc libEditor3D.a CMakeFiles/Editor3D.dir/src/Editor3D.cpp.o
+/usr/bin/ranlib libEditor3D.a

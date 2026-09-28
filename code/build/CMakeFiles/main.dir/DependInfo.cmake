@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/src/main.cpp.o.d"
+  "/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/src/fenetre.cpp" "CMakeFiles/main.dir/src/fenetre.cpp.o" "gcc" "CMakeFiles/main.dir/src/fenetre.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
