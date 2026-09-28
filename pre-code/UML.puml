@@ -82,11 +82,11 @@ package "HalfEdge" {
     }
 
     class Vertex {
-        - position : Vector3
+        - position : vector<double>
         - halfEdge : HalfEdge*
 
-        + getPosition() : Vector3
-        + setPosition( Vector3) : void
+        + getPosition() : vector<double>
+        + setPosition( vector<double>) : void
         + getHalfEdge() : HalfEdge*
     }
 
