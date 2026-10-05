@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{}%
+\contentsline {section}{\numberline {2}Problème}{3}{}%
+\contentsline {section}{\numberline {3}Contexte du projet}{4}{}%
+\contentsline {section}{\numberline {4}UML}{5}{}%
+\contentsline {section}{\numberline {5}Halfedge}{5}{}%
+\contentsline {section}{\numberline {6}Affichage}{6}{}%

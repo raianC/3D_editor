@@ -1,13 +1,13 @@
 //Mesh.cpp
+
 #include "Mesh.hpp"
-
-
 
 Mesh::Mesh(std::vector<std::vector<double>> V,std::vector<std::vector<double>> F){
     tabVertex.resize(V.size());
     tabFace.resize(F.size());
-    tabHE.resize(F.size());
+    tabHE.resize(3*F.size());
 
+    // Initialisation du tableau de Vertex
     for (int i=0; i<V.size(); ++i){
         Vertex* temp = new Vertex;
         temp->setPosition(V[i][0],V[i][1],V[i][2]);
@@ -15,12 +15,14 @@ Mesh::Mesh(std::vector<std::vector<double>> V,std::vector<std::vector<double>> F
         tabVertex[i]=temp;
     }
 
+    // Initialisation du tableau de Face
     for (int i=0; i<F.size(); ++i){
         Face* temp = new Face;
         temp->setHalfEdge(nullptr);
         tabFace[i]=temp;
     }
 
+    // Initialisation du tableau de HalfEdge
     for (int i=0; i<F.size(); ++i){
         
         HalfEdge* pHE0,*pHE1,*pHE2;
@@ -37,11 +39,22 @@ Mesh::Mesh(std::vector<std::vector<double>> V,std::vector<std::vector<double>> F
         if (tabFace[i]->getHalfEdge() == nullptr){
             tabFace[i]->setHalfEdge(pHE0);
         }
+        tabHE[3*i] = pHE0; tabHE[3*i+1] = pHE1; tabHE[3*i+2] = pHE2;
     }
 }
 
 Mesh::~Mesh(){
-
+    for (int i = 0; i<tabVertex.size(); ++i){
+        delete tabFace[i];
+    }
+    
+    for (int i = 0; i<tabFace.size(); ++i){
+        delete tabFace[i];
+    }
+    
+    for (int i = 0; i<tabHE.size(); ++i){
+        delete tabHE[i];
+    }
 }
 
 void Mesh::addVertex(Vertex* newvertex){
