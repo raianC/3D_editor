@@ -1,17 +1,15 @@
-// PlyLoader.hpp
+// ObjLoader.hpp
 
 #pragma once
 
 #include "Loader.hpp"
-#include <vector>
-#include <iostream>
-#include <fstream>
-#include <sstream>
 #include <string>
-#include <cstdint>
-#include <algorithm>
+#include <vector>
+#include <fstream>
+#include <iostream>
+#include <sstream>
 
-class PlyLoader : public Loader {
+class ObjLoader : public Loader {
     public:
         void LoadFile(std::string filePath) override;
 };

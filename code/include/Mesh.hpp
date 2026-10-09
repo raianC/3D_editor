@@ -4,6 +4,7 @@
 
 #include "HalfEdge.hpp"
 #include <vector>
+#include <algorithm>
 
 
 class Mesh {
