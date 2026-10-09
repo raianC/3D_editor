@@ -142,30 +142,6 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-src/fenetre.o: src/fenetre.cpp.o
-.PHONY : src/fenetre.o
-
-# target to build an object file
-src/fenetre.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/fenetre.cpp.o
-.PHONY : src/fenetre.cpp.o
-
-src/fenetre.i: src/fenetre.cpp.i
-.PHONY : src/fenetre.i
-
-# target to preprocess a source file
-src/fenetre.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/fenetre.cpp.i
-.PHONY : src/fenetre.cpp.i
-
-src/fenetre.s: src/fenetre.cpp.s
-.PHONY : src/fenetre.s
-
-# target to generate assembly for a file
-src/fenetre.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/fenetre.cpp.s
-.PHONY : src/fenetre.cpp.s
-
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
 
@@ -190,6 +166,30 @@ src/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/src/glad.c.s
 .PHONY : src/glad.c.s
 
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -200,12 +200,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... glad"
 	@echo "... main"
-	@echo "... src/fenetre.o"
-	@echo "... src/fenetre.i"
-	@echo "... src/fenetre.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

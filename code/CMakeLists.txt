@@ -24,7 +24,10 @@ add_library(ObjLoader src/ObjLoader.cpp)
 add_library(Loader src/Loader.cpp)
 #add_library(glad src/glad.c)
 
+<<<<<<< Updated upstream
 #add_executable(main src/fenetre.cpp)
+=======
+>>>>>>> Stashed changes
 add_executable(main src/main.cpp)
 
 #target_link_libraries(main glfw glad)
