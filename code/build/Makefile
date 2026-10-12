@@ -117,6 +117,123 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Face
+
+# Build rule for target.
+Face: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Face
+.PHONY : Face
+
+# fast build rule for target.
+Face/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Face.dir/build.make CMakeFiles/Face.dir/build
+.PHONY : Face/fast
+
+#=============================================================================
+# Target rules for targets named Editor3D
+
+# Build rule for target.
+Editor3D: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Editor3D
+.PHONY : Editor3D
+
+# fast build rule for target.
+Editor3D/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Editor3D.dir/build.make CMakeFiles/Editor3D.dir/build
+.PHONY : Editor3D/fast
+
+#=============================================================================
+# Target rules for targets named Mesh
+
+# Build rule for target.
+Mesh: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Mesh
+.PHONY : Mesh
+
+# fast build rule for target.
+Mesh/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mesh.dir/build.make CMakeFiles/Mesh.dir/build
+.PHONY : Mesh/fast
+
+#=============================================================================
+# Target rules for targets named Scene
+
+# Build rule for target.
+Scene: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Scene
+.PHONY : Scene
+
+# fast build rule for target.
+Scene/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Scene.dir/build.make CMakeFiles/Scene.dir/build
+.PHONY : Scene/fast
+
+#=============================================================================
+# Target rules for targets named Vertex
+
+# Build rule for target.
+Vertex: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Vertex
+.PHONY : Vertex
+
+# fast build rule for target.
+Vertex/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vertex.dir/build.make CMakeFiles/Vertex.dir/build
+.PHONY : Vertex/fast
+
+#=============================================================================
+# Target rules for targets named HalfEdge
+
+# Build rule for target.
+HalfEdge: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 HalfEdge
+.PHONY : HalfEdge
+
+# fast build rule for target.
+HalfEdge/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HalfEdge.dir/build.make CMakeFiles/HalfEdge.dir/build
+.PHONY : HalfEdge/fast
+
+#=============================================================================
+# Target rules for targets named PlyLoader
+
+# Build rule for target.
+PlyLoader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PlyLoader
+.PHONY : PlyLoader
+
+# fast build rule for target.
+PlyLoader/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlyLoader.dir/build.make CMakeFiles/PlyLoader.dir/build
+.PHONY : PlyLoader/fast
+
+#=============================================================================
+# Target rules for targets named ObjLoader
+
+# Build rule for target.
+ObjLoader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ObjLoader
+.PHONY : ObjLoader
+
+# fast build rule for target.
+ObjLoader/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ObjLoader.dir/build.make CMakeFiles/ObjLoader.dir/build
+.PHONY : ObjLoader/fast
+
+#=============================================================================
+# Target rules for targets named Loader
+
+# Build rule for target.
+Loader: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Loader
+.PHONY : Loader
+
+# fast build rule for target.
+Loader/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Loader.dir/build.make CMakeFiles/Loader.dir/build
+.PHONY : Loader/fast
+
+#=============================================================================
 # Target rules for targets named glad
 
 # Build rule for target.
@@ -130,6 +247,19 @@ glad/fast:
 .PHONY : glad/fast
 
 #=============================================================================
+# Target rules for targets named cam
+
+# Build rule for target.
+cam: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cam
+.PHONY : cam
+
+# fast build rule for target.
+cam/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cam.dir/build.make CMakeFiles/cam.dir/build
+.PHONY : cam/fast
+
+#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -141,6 +271,246 @@ main: cmake_check_build_system
 main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
+
+src/Editor3D.o: src/Editor3D.cpp.o
+.PHONY : src/Editor3D.o
+
+# target to build an object file
+src/Editor3D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Editor3D.dir/build.make CMakeFiles/Editor3D.dir/src/Editor3D.cpp.o
+.PHONY : src/Editor3D.cpp.o
+
+src/Editor3D.i: src/Editor3D.cpp.i
+.PHONY : src/Editor3D.i
+
+# target to preprocess a source file
+src/Editor3D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Editor3D.dir/build.make CMakeFiles/Editor3D.dir/src/Editor3D.cpp.i
+.PHONY : src/Editor3D.cpp.i
+
+src/Editor3D.s: src/Editor3D.cpp.s
+.PHONY : src/Editor3D.s
+
+# target to generate assembly for a file
+src/Editor3D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Editor3D.dir/build.make CMakeFiles/Editor3D.dir/src/Editor3D.cpp.s
+.PHONY : src/Editor3D.cpp.s
+
+src/Face.o: src/Face.cpp.o
+.PHONY : src/Face.o
+
+# target to build an object file
+src/Face.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Face.dir/build.make CMakeFiles/Face.dir/src/Face.cpp.o
+.PHONY : src/Face.cpp.o
+
+src/Face.i: src/Face.cpp.i
+.PHONY : src/Face.i
+
+# target to preprocess a source file
+src/Face.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Face.dir/build.make CMakeFiles/Face.dir/src/Face.cpp.i
+.PHONY : src/Face.cpp.i
+
+src/Face.s: src/Face.cpp.s
+.PHONY : src/Face.s
+
+# target to generate assembly for a file
+src/Face.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Face.dir/build.make CMakeFiles/Face.dir/src/Face.cpp.s
+.PHONY : src/Face.cpp.s
+
+src/HalfEdge.o: src/HalfEdge.cpp.o
+.PHONY : src/HalfEdge.o
+
+# target to build an object file
+src/HalfEdge.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HalfEdge.dir/build.make CMakeFiles/HalfEdge.dir/src/HalfEdge.cpp.o
+.PHONY : src/HalfEdge.cpp.o
+
+src/HalfEdge.i: src/HalfEdge.cpp.i
+.PHONY : src/HalfEdge.i
+
+# target to preprocess a source file
+src/HalfEdge.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HalfEdge.dir/build.make CMakeFiles/HalfEdge.dir/src/HalfEdge.cpp.i
+.PHONY : src/HalfEdge.cpp.i
+
+src/HalfEdge.s: src/HalfEdge.cpp.s
+.PHONY : src/HalfEdge.s
+
+# target to generate assembly for a file
+src/HalfEdge.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HalfEdge.dir/build.make CMakeFiles/HalfEdge.dir/src/HalfEdge.cpp.s
+.PHONY : src/HalfEdge.cpp.s
+
+src/Loader.o: src/Loader.cpp.o
+.PHONY : src/Loader.o
+
+# target to build an object file
+src/Loader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Loader.dir/build.make CMakeFiles/Loader.dir/src/Loader.cpp.o
+.PHONY : src/Loader.cpp.o
+
+src/Loader.i: src/Loader.cpp.i
+.PHONY : src/Loader.i
+
+# target to preprocess a source file
+src/Loader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Loader.dir/build.make CMakeFiles/Loader.dir/src/Loader.cpp.i
+.PHONY : src/Loader.cpp.i
+
+src/Loader.s: src/Loader.cpp.s
+.PHONY : src/Loader.s
+
+# target to generate assembly for a file
+src/Loader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Loader.dir/build.make CMakeFiles/Loader.dir/src/Loader.cpp.s
+.PHONY : src/Loader.cpp.s
+
+src/Mesh.o: src/Mesh.cpp.o
+.PHONY : src/Mesh.o
+
+# target to build an object file
+src/Mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mesh.dir/build.make CMakeFiles/Mesh.dir/src/Mesh.cpp.o
+.PHONY : src/Mesh.cpp.o
+
+src/Mesh.i: src/Mesh.cpp.i
+.PHONY : src/Mesh.i
+
+# target to preprocess a source file
+src/Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mesh.dir/build.make CMakeFiles/Mesh.dir/src/Mesh.cpp.i
+.PHONY : src/Mesh.cpp.i
+
+src/Mesh.s: src/Mesh.cpp.s
+.PHONY : src/Mesh.s
+
+# target to generate assembly for a file
+src/Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mesh.dir/build.make CMakeFiles/Mesh.dir/src/Mesh.cpp.s
+.PHONY : src/Mesh.cpp.s
+
+src/ObjLoader.o: src/ObjLoader.cpp.o
+.PHONY : src/ObjLoader.o
+
+# target to build an object file
+src/ObjLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ObjLoader.dir/build.make CMakeFiles/ObjLoader.dir/src/ObjLoader.cpp.o
+.PHONY : src/ObjLoader.cpp.o
+
+src/ObjLoader.i: src/ObjLoader.cpp.i
+.PHONY : src/ObjLoader.i
+
+# target to preprocess a source file
+src/ObjLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ObjLoader.dir/build.make CMakeFiles/ObjLoader.dir/src/ObjLoader.cpp.i
+.PHONY : src/ObjLoader.cpp.i
+
+src/ObjLoader.s: src/ObjLoader.cpp.s
+.PHONY : src/ObjLoader.s
+
+# target to generate assembly for a file
+src/ObjLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ObjLoader.dir/build.make CMakeFiles/ObjLoader.dir/src/ObjLoader.cpp.s
+.PHONY : src/ObjLoader.cpp.s
+
+src/PlyLoader.o: src/PlyLoader.cpp.o
+.PHONY : src/PlyLoader.o
+
+# target to build an object file
+src/PlyLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlyLoader.dir/build.make CMakeFiles/PlyLoader.dir/src/PlyLoader.cpp.o
+.PHONY : src/PlyLoader.cpp.o
+
+src/PlyLoader.i: src/PlyLoader.cpp.i
+.PHONY : src/PlyLoader.i
+
+# target to preprocess a source file
+src/PlyLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlyLoader.dir/build.make CMakeFiles/PlyLoader.dir/src/PlyLoader.cpp.i
+.PHONY : src/PlyLoader.cpp.i
+
+src/PlyLoader.s: src/PlyLoader.cpp.s
+.PHONY : src/PlyLoader.s
+
+# target to generate assembly for a file
+src/PlyLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlyLoader.dir/build.make CMakeFiles/PlyLoader.dir/src/PlyLoader.cpp.s
+.PHONY : src/PlyLoader.cpp.s
+
+src/Scene.o: src/Scene.cpp.o
+.PHONY : src/Scene.o
+
+# target to build an object file
+src/Scene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Scene.dir/build.make CMakeFiles/Scene.dir/src/Scene.cpp.o
+.PHONY : src/Scene.cpp.o
+
+src/Scene.i: src/Scene.cpp.i
+.PHONY : src/Scene.i
+
+# target to preprocess a source file
+src/Scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Scene.dir/build.make CMakeFiles/Scene.dir/src/Scene.cpp.i
+.PHONY : src/Scene.cpp.i
+
+src/Scene.s: src/Scene.cpp.s
+.PHONY : src/Scene.s
+
+# target to generate assembly for a file
+src/Scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Scene.dir/build.make CMakeFiles/Scene.dir/src/Scene.cpp.s
+.PHONY : src/Scene.cpp.s
+
+src/Vertex.o: src/Vertex.cpp.o
+.PHONY : src/Vertex.o
+
+# target to build an object file
+src/Vertex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vertex.dir/build.make CMakeFiles/Vertex.dir/src/Vertex.cpp.o
+.PHONY : src/Vertex.cpp.o
+
+src/Vertex.i: src/Vertex.cpp.i
+.PHONY : src/Vertex.i
+
+# target to preprocess a source file
+src/Vertex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vertex.dir/build.make CMakeFiles/Vertex.dir/src/Vertex.cpp.i
+.PHONY : src/Vertex.cpp.i
+
+src/Vertex.s: src/Vertex.cpp.s
+.PHONY : src/Vertex.s
+
+# target to generate assembly for a file
+src/Vertex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vertex.dir/build.make CMakeFiles/Vertex.dir/src/Vertex.cpp.s
+.PHONY : src/Vertex.cpp.s
+
+src/camera.o: src/camera.cpp.o
+.PHONY : src/camera.o
+
+# target to build an object file
+src/camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cam.dir/build.make CMakeFiles/cam.dir/src/camera.cpp.o
+.PHONY : src/camera.cpp.o
+
+src/camera.i: src/camera.cpp.i
+.PHONY : src/camera.i
+
+# target to preprocess a source file
+src/camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cam.dir/build.make CMakeFiles/cam.dir/src/camera.cpp.i
+.PHONY : src/camera.cpp.i
+
+src/camera.s: src/camera.cpp.s
+.PHONY : src/camera.s
+
+# target to generate assembly for a file
+src/camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cam.dir/build.make CMakeFiles/cam.dir/src/camera.cpp.s
+.PHONY : src/camera.cpp.s
 
 src/glad.o: src/glad.c.o
 .PHONY : src/glad.o
@@ -198,8 +568,48 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Editor3D"
+	@echo "... Face"
+	@echo "... HalfEdge"
+	@echo "... Loader"
+	@echo "... Mesh"
+	@echo "... ObjLoader"
+	@echo "... PlyLoader"
+	@echo "... Scene"
+	@echo "... Vertex"
+	@echo "... cam"
 	@echo "... glad"
 	@echo "... main"
+	@echo "... src/Editor3D.o"
+	@echo "... src/Editor3D.i"
+	@echo "... src/Editor3D.s"
+	@echo "... src/Face.o"
+	@echo "... src/Face.i"
+	@echo "... src/Face.s"
+	@echo "... src/HalfEdge.o"
+	@echo "... src/HalfEdge.i"
+	@echo "... src/HalfEdge.s"
+	@echo "... src/Loader.o"
+	@echo "... src/Loader.i"
+	@echo "... src/Loader.s"
+	@echo "... src/Mesh.o"
+	@echo "... src/Mesh.i"
+	@echo "... src/Mesh.s"
+	@echo "... src/ObjLoader.o"
+	@echo "... src/ObjLoader.i"
+	@echo "... src/ObjLoader.s"
+	@echo "... src/PlyLoader.o"
+	@echo "... src/PlyLoader.i"
+	@echo "... src/PlyLoader.s"
+	@echo "... src/Scene.o"
+	@echo "... src/Scene.i"
+	@echo "... src/Scene.s"
+	@echo "... src/Vertex.o"
+	@echo "... src/Vertex.i"
+	@echo "... src/Vertex.s"
+	@echo "... src/camera.o"
+	@echo "... src/camera.i"
+	@echo "... src/camera.s"
 	@echo "... src/glad.o"
 	@echo "... src/glad.i"
 	@echo "... src/glad.s"

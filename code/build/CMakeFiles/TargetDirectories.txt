@@ -1,4 +1,14 @@
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/Face.dir
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/Editor3D.dir
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/Mesh.dir
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/Scene.dir
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/Vertex.dir
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/HalfEdge.dir
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/PlyLoader.dir
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/ObjLoader.dir
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/Loader.dir
 /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/glad.dir
+/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/cam.dir
 /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/main.dir
 /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/edit_cache.dir
 /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles/rebuild_cache.dir

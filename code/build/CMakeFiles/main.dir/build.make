@@ -92,7 +92,16 @@ main_EXTERNAL_OBJECTS =
 
 main: CMakeFiles/main.dir/src/main.cpp.o
 main: CMakeFiles/main.dir/build.make
+main: libFace.a
+main: libEditor3D.a
+main: libMesh.a
+main: libScene.a
+main: libVertex.a
 main: libglad.a
+main: libcam.a
+main: libLoader.a
+main: libPlyLoader.a
+main: libObjLoader.a
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)

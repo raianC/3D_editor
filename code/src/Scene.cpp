@@ -23,12 +23,6 @@ void Scene::window(){
 
     glfwMakeContextCurrent(window);
     
-    glfwSetFramebufferSizeCallback(
-        window,
-        framebuffer_size_callback
-    );
-
-
 }
 
 void Scene::draw(std::vector<HalfEdge*> halfEdges,GLFWwindow* window) {
@@ -190,11 +184,14 @@ void Scene::draw(std::vector<HalfEdge*> halfEdges,GLFWwindow* window) {
         glBindVertexArray(VAO);
 
         // Dessiner les 5 points
-        glDrawArrays(
-            GL_POINTS,
-            0,
-            static_cast<GLsizei>(halfEdges.size())
-        );
+        for(size_t i = 0; i < halfEdges.size(); ++i) {
+            glDrawArrays(
+                GL_POINTS,
+                0,
+                static_cast<GLsizei>(halfEdges.size())
+            );
+        }
+        
 
 
         // Afficher
@@ -208,4 +205,13 @@ void Scene::draw(std::vector<HalfEdge*> halfEdges,GLFWwindow* window) {
 void Scene::framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
     glViewport(0, 0, width, height);
+}
+
+void Scene::update() {
+    // Update logic for the scene
+}
+
+
+GLFWwindow* Scene::getwindow() {
+    return glfwGetCurrentContext();
 }

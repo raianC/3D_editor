@@ -63,7 +63,17 @@ CMAKE_BINARY_DIR = /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/Face.dir/all
+all: CMakeFiles/Editor3D.dir/all
+all: CMakeFiles/Mesh.dir/all
+all: CMakeFiles/Scene.dir/all
+all: CMakeFiles/Vertex.dir/all
+all: CMakeFiles/HalfEdge.dir/all
+all: CMakeFiles/PlyLoader.dir/all
+all: CMakeFiles/ObjLoader.dir/all
+all: CMakeFiles/Loader.dir/all
 all: CMakeFiles/glad.dir/all
+all: CMakeFiles/cam.dir/all
 all: CMakeFiles/main.dir/all
 .PHONY : all
 
@@ -72,9 +82,253 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/Face.dir/clean
+clean: CMakeFiles/Editor3D.dir/clean
+clean: CMakeFiles/Mesh.dir/clean
+clean: CMakeFiles/Scene.dir/clean
+clean: CMakeFiles/Vertex.dir/clean
+clean: CMakeFiles/HalfEdge.dir/clean
+clean: CMakeFiles/PlyLoader.dir/clean
+clean: CMakeFiles/ObjLoader.dir/clean
+clean: CMakeFiles/Loader.dir/clean
 clean: CMakeFiles/glad.dir/clean
+clean: CMakeFiles/cam.dir/clean
 clean: CMakeFiles/main.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Face.dir
+
+# All Build rule for target.
+CMakeFiles/Face.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Face.dir/build.make CMakeFiles/Face.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Face.dir/build.make CMakeFiles/Face.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=3,4 "Built target Face"
+.PHONY : CMakeFiles/Face.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Face.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Face.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 0
+.PHONY : CMakeFiles/Face.dir/rule
+
+# Convenience name for target.
+Face: CMakeFiles/Face.dir/rule
+.PHONY : Face
+
+# clean rule for target.
+CMakeFiles/Face.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Face.dir/build.make CMakeFiles/Face.dir/clean
+.PHONY : CMakeFiles/Face.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Editor3D.dir
+
+# All Build rule for target.
+CMakeFiles/Editor3D.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Editor3D.dir/build.make CMakeFiles/Editor3D.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Editor3D.dir/build.make CMakeFiles/Editor3D.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=1,2 "Built target Editor3D"
+.PHONY : CMakeFiles/Editor3D.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Editor3D.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Editor3D.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 0
+.PHONY : CMakeFiles/Editor3D.dir/rule
+
+# Convenience name for target.
+Editor3D: CMakeFiles/Editor3D.dir/rule
+.PHONY : Editor3D
+
+# clean rule for target.
+CMakeFiles/Editor3D.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Editor3D.dir/build.make CMakeFiles/Editor3D.dir/clean
+.PHONY : CMakeFiles/Editor3D.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Mesh.dir
+
+# All Build rule for target.
+CMakeFiles/Mesh.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mesh.dir/build.make CMakeFiles/Mesh.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mesh.dir/build.make CMakeFiles/Mesh.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=9,10 "Built target Mesh"
+.PHONY : CMakeFiles/Mesh.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Mesh.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Mesh.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 0
+.PHONY : CMakeFiles/Mesh.dir/rule
+
+# Convenience name for target.
+Mesh: CMakeFiles/Mesh.dir/rule
+.PHONY : Mesh
+
+# clean rule for target.
+CMakeFiles/Mesh.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Mesh.dir/build.make CMakeFiles/Mesh.dir/clean
+.PHONY : CMakeFiles/Mesh.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Scene.dir
+
+# All Build rule for target.
+CMakeFiles/Scene.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Scene.dir/build.make CMakeFiles/Scene.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Scene.dir/build.make CMakeFiles/Scene.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=15,16 "Built target Scene"
+.PHONY : CMakeFiles/Scene.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Scene.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Scene.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 0
+.PHONY : CMakeFiles/Scene.dir/rule
+
+# Convenience name for target.
+Scene: CMakeFiles/Scene.dir/rule
+.PHONY : Scene
+
+# clean rule for target.
+CMakeFiles/Scene.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Scene.dir/build.make CMakeFiles/Scene.dir/clean
+.PHONY : CMakeFiles/Scene.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Vertex.dir
+
+# All Build rule for target.
+CMakeFiles/Vertex.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vertex.dir/build.make CMakeFiles/Vertex.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vertex.dir/build.make CMakeFiles/Vertex.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=17,18 "Built target Vertex"
+.PHONY : CMakeFiles/Vertex.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Vertex.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Vertex.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 0
+.PHONY : CMakeFiles/Vertex.dir/rule
+
+# Convenience name for target.
+Vertex: CMakeFiles/Vertex.dir/rule
+.PHONY : Vertex
+
+# clean rule for target.
+CMakeFiles/Vertex.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vertex.dir/build.make CMakeFiles/Vertex.dir/clean
+.PHONY : CMakeFiles/Vertex.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/HalfEdge.dir
+
+# All Build rule for target.
+CMakeFiles/HalfEdge.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HalfEdge.dir/build.make CMakeFiles/HalfEdge.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HalfEdge.dir/build.make CMakeFiles/HalfEdge.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=5,6 "Built target HalfEdge"
+.PHONY : CMakeFiles/HalfEdge.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/HalfEdge.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/HalfEdge.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 0
+.PHONY : CMakeFiles/HalfEdge.dir/rule
+
+# Convenience name for target.
+HalfEdge: CMakeFiles/HalfEdge.dir/rule
+.PHONY : HalfEdge
+
+# clean rule for target.
+CMakeFiles/HalfEdge.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HalfEdge.dir/build.make CMakeFiles/HalfEdge.dir/clean
+.PHONY : CMakeFiles/HalfEdge.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/PlyLoader.dir
+
+# All Build rule for target.
+CMakeFiles/PlyLoader.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlyLoader.dir/build.make CMakeFiles/PlyLoader.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlyLoader.dir/build.make CMakeFiles/PlyLoader.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=13,14 "Built target PlyLoader"
+.PHONY : CMakeFiles/PlyLoader.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/PlyLoader.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PlyLoader.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 0
+.PHONY : CMakeFiles/PlyLoader.dir/rule
+
+# Convenience name for target.
+PlyLoader: CMakeFiles/PlyLoader.dir/rule
+.PHONY : PlyLoader
+
+# clean rule for target.
+CMakeFiles/PlyLoader.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PlyLoader.dir/build.make CMakeFiles/PlyLoader.dir/clean
+.PHONY : CMakeFiles/PlyLoader.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/ObjLoader.dir
+
+# All Build rule for target.
+CMakeFiles/ObjLoader.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ObjLoader.dir/build.make CMakeFiles/ObjLoader.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ObjLoader.dir/build.make CMakeFiles/ObjLoader.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=11,12 "Built target ObjLoader"
+.PHONY : CMakeFiles/ObjLoader.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/ObjLoader.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ObjLoader.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 0
+.PHONY : CMakeFiles/ObjLoader.dir/rule
+
+# Convenience name for target.
+ObjLoader: CMakeFiles/ObjLoader.dir/rule
+.PHONY : ObjLoader
+
+# clean rule for target.
+CMakeFiles/ObjLoader.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ObjLoader.dir/build.make CMakeFiles/ObjLoader.dir/clean
+.PHONY : CMakeFiles/ObjLoader.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/Loader.dir
+
+# All Build rule for target.
+CMakeFiles/Loader.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Loader.dir/build.make CMakeFiles/Loader.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Loader.dir/build.make CMakeFiles/Loader.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=7,8 "Built target Loader"
+.PHONY : CMakeFiles/Loader.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Loader.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Loader.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 0
+.PHONY : CMakeFiles/Loader.dir/rule
+
+# Convenience name for target.
+Loader: CMakeFiles/Loader.dir/rule
+.PHONY : Loader
+
+# clean rule for target.
+CMakeFiles/Loader.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Loader.dir/build.make CMakeFiles/Loader.dir/clean
+.PHONY : CMakeFiles/Loader.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/glad.dir
@@ -83,7 +337,7 @@ clean: CMakeFiles/main.dir/clean
 CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/glad.dir/build.make CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=1,2 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=21,22 "Built target glad"
 .PHONY : CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -103,18 +357,53 @@ CMakeFiles/glad.dir/clean:
 .PHONY : CMakeFiles/glad.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/cam.dir
+
+# All Build rule for target.
+CMakeFiles/cam.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cam.dir/build.make CMakeFiles/cam.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cam.dir/build.make CMakeFiles/cam.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=19,20 "Built target cam"
+.PHONY : CMakeFiles/cam.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cam.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cam.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 0
+.PHONY : CMakeFiles/cam.dir/rule
+
+# Convenience name for target.
+cam: CMakeFiles/cam.dir/rule
+.PHONY : cam
+
+# clean rule for target.
+CMakeFiles/cam.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cam.dir/build.make CMakeFiles/cam.dir/clean
+.PHONY : CMakeFiles/cam.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/main.dir
 
 # All Build rule for target.
+CMakeFiles/main.dir/all: CMakeFiles/Face.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/PlyLoader.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/ObjLoader.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/Loader.dir/all
 CMakeFiles/main.dir/all: CMakeFiles/glad.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/cam.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/Editor3D.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/Mesh.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/Scene.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/Vertex.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=3,4 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=23,24 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 22
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/Users/raian/Documents/GitHub/3D_editor/code/build/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule

@@ -35,6 +35,5 @@ class Scene {
     void window();
     void update();
     void draw(std::vector<HalfEdge*> halfEdges,GLFWwindow* window);
-    
 
 };

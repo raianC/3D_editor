@@ -1,1 +1,1 @@
-/usr/bin/c++ -g -O0 CMakeFiles/main.dir/src/main.cpp.o -o main  -lglfw libglad.a 
+/usr/bin/c++ -g -O0 CMakeFiles/main.dir/src/main.cpp.o -o main  libFace.a libEditor3D.a libMesh.a libScene.a libVertex.a libglad.a -lfenetre libcam.a libLoader.a libPlyLoader.a libObjLoader.a 

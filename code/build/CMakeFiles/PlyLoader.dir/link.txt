@@ -1,0 +1,2 @@
+/usr/bin/ar qc libPlyLoader.a CMakeFiles/PlyLoader.dir/src/PlyLoader.cpp.o
+/usr/bin/ranlib libPlyLoader.a
