@@ -3,7 +3,8 @@
 #include "Mesh.hpp"
 
 
-Mesh::Mesh(std::vector<std::vector<double>> V,std::vector<std::vector<double>> F){
+
+Mesh::Mesh(std::vector<std::vector<float>> V,std::vector<std::vector<int>> F){
     tabVertex.resize(V.size());
     tabFace.resize(F.size());
     tabHE.resize(3*F.size());
@@ -55,8 +56,14 @@ Mesh::Mesh(std::vector<std::vector<double>> V,std::vector<std::vector<double>> F
         pHE1->setTarget(tabVertex[F[i][2]]);
         pHE2->setTarget(tabVertex[F[i][0]]);
 
-        if (tabVertex[i]->getHalfEdge()==nullptr){
-            tabVertex[i]->setHalfEdge(pHE0);
+        if (tabVertex[F[i][0]]->getHalfEdge()==nullptr){
+            tabVertex[F[i][0]]->setHalfEdge(pHE0);
+        }
+         if (tabVertex[F[i][1]]->getHalfEdge()==nullptr){
+            tabVertex[F[i][1]]->setHalfEdge(pHE1);
+        }
+         if (tabVertex[F[i][2]]->getHalfEdge()==nullptr){
+            tabVertex[F[i][2]]->setHalfEdge(pHE2);
         }
         
         pHE0->setNext(pHE1); pHE1->setNext(pHE2); pHE2->setNext(pHE0);
@@ -94,6 +101,9 @@ Mesh::~Mesh(){
     for (int i = 0; i<tabHE.size(); ++i){
         delete tabHE[i];
     }
+    tabVertex.clear();
+    tabFace.clear();
+    tabHE.clear();
 }
 
 void Mesh::addVertex(Vertex* newvertex){
@@ -104,3 +114,14 @@ void Mesh::addFace(Face* newface){
 
 }
 
+const std::vector<Vertex*>& Mesh::getVertices() const {
+    return tabVertex;
+}
+
+const std::vector<Face*>& Mesh::getFaces() const {
+    return tabFace;
+}
+
+const std::vector<HalfEdge*>& Mesh::getHalfEdges() const {
+    return tabHE;
+}

@@ -2,7 +2,7 @@
 
 #pragma once
 
-#include "HalfEdge.hpp"
+class HalfEdge;
 
 class Face {
     private:

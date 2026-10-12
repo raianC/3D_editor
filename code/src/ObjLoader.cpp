@@ -1,10 +1,7 @@
 // ObjLoader.cpp
 
 #include "ObjLoader.hpp"
-#include <fstream>
-#include <iostream>
-#include <sstream>
-#include <string>
+
 
 
 

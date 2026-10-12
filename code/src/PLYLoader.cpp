@@ -1,12 +1,7 @@
 // PlyLoader.cpp
 
 #include "PlyLoader.hpp"
-#include <fstream>
-#include <iostream>
-#include <sstream>
-#include <string>
-#include <cstdint>
-#include <algorithm>
+
 
 
 
@@ -128,14 +123,22 @@ void PlyLoader::LoadFile(std::string filePath) {
                 tabPoint.push_back({static_cast<float>(x), static_cast<float>(y), static_cast<float>(z)});
             }
         }
-
+        char dummy;
+        for (int p = 0; p < 4; ++p) {
+            File3D.get(dummy);
+        }
         for (int i = 0; i < nbFaces; ++i) {
+
             uint8_t n;
             File3D.read(reinterpret_cast<char*>(&n), sizeof(uint8_t));
+            // Skip extra face properties (e.g., colors stored after indices)
+            
 
             if (n != 3) {
                 std::cout << "Error: non-triangular face found at face " << i << std::endl;
-                return;
+                // --- START DEBUG ---
+                std::cout << "Face " << i << " has " << static_cast<int>(n) << " vertices." << std::endl;
+                continue;
             }
 
             int v1 = 0, v2 = 0, v3 = 0;
@@ -155,7 +158,6 @@ void PlyLoader::LoadFile(std::string filePath) {
                 File3D.read(reinterpret_cast<char*>(&v3), sizeof(int));
             }
 
-            // Skip extra face properties (e.g., colors stored after indices)
             if (facePropertyCount > 0) {
                 File3D.seekg(facePropertyCount, std::ios::cur);
             }

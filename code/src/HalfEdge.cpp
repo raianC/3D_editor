@@ -1,7 +1,8 @@
 //HalfEdge.cpp
 
 #include "HalfEdge.hpp"
-
+#include "Vertex.hpp"
+#include "Face.hpp"
 
 Vertex* HalfEdge::Target(){
     return target;

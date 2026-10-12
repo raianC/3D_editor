@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include "Face.hpp"
-#include "Vertex.hpp"
+class Face;
+class Vertex;
 
 class HalfEdge {
     private:

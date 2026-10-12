@@ -1,17 +1,17 @@
 //Vertex.cpp
 #include "Vertex.hpp"
+#include "HalfEdge.hpp"
 
 
-
-double Vertex::getPosition(){
-    return x,y,z;
+std::array<float, 3> Vertex::getPosition(){
+    return {x, y, z};
 }
 
 HalfEdge* Vertex::getHalfEdge(){
     return halfedge;
 }
 
-void Vertex::setPosition(double newX,double newY,double newZ){
+void Vertex::setPosition(float newX,float newY,float newZ){
     x = newX; y = newY; z = newZ;
 }
 

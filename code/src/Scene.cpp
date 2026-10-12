@@ -1,5 +1,4 @@
 // Scene.cpp
-#pragma once
 #include "Scene.hpp"
 
 
@@ -9,6 +8,10 @@ Scene::Scene() {
 
 void Scene::window(){
     glfwInit();
+    if (!glfwInit()) {
+        std::cerr << "Failed to initialize GLFW\n";
+        return ;
+    }
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
@@ -20,8 +23,17 @@ void Scene::window(){
         glfwTerminate();
         return;
     }
+    
 
     glfwMakeContextCurrent(window);
+
+    if (!gladLoadGLLoader(
+        (GLADloadproc)glfwGetProcAddress)) {
+        std::cerr << "Failed to initialize GLAD\n";
+        glfwDestroyWindow(window);
+        glfwTerminate();
+        return;
+    }
     
 }
 
@@ -183,14 +195,14 @@ void Scene::draw(std::vector<HalfEdge*> halfEdges,GLFWwindow* window) {
         // VAO
         glBindVertexArray(VAO);
 
-        // Dessiner les 5 points
-        for(size_t i = 0; i < halfEdges.size(); ++i) {
-            glDrawArrays(
-                GL_POINTS,
-                0,
-                static_cast<GLsizei>(halfEdges.size())
-            );
-        }
+        
+       
+        glDrawArrays(
+            GL_POINTS,
+            0,
+            static_cast<GLsizei>(halfEdges.size())
+        );
+        
         
 
 

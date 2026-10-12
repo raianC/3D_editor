@@ -1,5 +1,6 @@
 //Face.cpp
 #include "Face.hpp"
+#include "HalfEdge.hpp"
 
 
 HalfEdge* Face::getHalfEdge() {

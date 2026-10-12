@@ -1,16 +1,16 @@
 //vertex.hpp
 
 #pragma once
-
-#include "HalfEdge.hpp"
+#include <array>
+class HalfEdge;
 
 class Vertex {
     private:
-        double x,y,z;
+        float x,y,z;
         HalfEdge* halfedge;
     public:
-        double getPosition();
+        std::array<float, 3> getPosition();
         HalfEdge* getHalfEdge();
-        void setPosition(double newX,double newY,double newZ);
+        void setPosition(float newX,float newY,float newZ);
         void setHalfEdge(HalfEdge* he);
 };

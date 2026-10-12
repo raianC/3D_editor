@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/src/HalfEdge.cpp" "CMakeFiles/HalfEdge.dir/src/HalfEdge.cpp.o" "gcc" "CMakeFiles/HalfEdge.dir/src/HalfEdge.cpp.o.d"
+  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/src/HalfEdge.cpp" "CMakeFiles/HalfEdge.dir/src/HalfEdge.cpp.o" "gcc" "CMakeFiles/HalfEdge.dir/src/HalfEdge.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
