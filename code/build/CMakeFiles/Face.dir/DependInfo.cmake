@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/src/Face.cpp" "CMakeFiles/Face.dir/src/Face.cpp.o" "gcc" "CMakeFiles/Face.dir/src/Face.cpp.o.d"
+  "/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/src/Face.cpp" "CMakeFiles/Face.dir/src/Face.cpp.o" "gcc" "CMakeFiles/Face.dir/src/Face.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

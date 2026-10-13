@@ -5,6 +5,10 @@
 #include <GLFW/glfw3.h>
 #include "Mesh.hpp"
 #include <iostream>
+#include "camera.hpp"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 class Scene {
     private:
@@ -12,9 +16,13 @@ class Scene {
         #version 330 core
         layout (location = 0) in vec3 aPos;
 
+        uniform mat4 model;
+        uniform mat4 view;
+        uniform mat4 projection;
+
         void main()
         {
-            gl_Position = vec4(aPos, 1.0);
+            gl_Position = projection * view * model * vec4(aPos, 1.0);
         }
     )";
 
@@ -27,13 +35,25 @@ class Scene {
             FragColor = vec4(1.0, 0.5, 0.2, 1.0);
         }
     )";
-    
-    void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+    GLFWwindow* windowPtr = nullptr;
 
-    public:
+    // Variables de la souris et la caméra de la scène
+    camera cam; 
+    float lastX = 400.0f;
+    float lastY = 300.0f;
+    bool firstMouse = true;
+
+    void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+    static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+    static void mouse_callback(GLFWwindow* window, double xposIn, double yposIn);
+
+public:
     Scene();
     void window();
     void update();
-    void draw(std::vector<HalfEdge*> halfEdges,GLFWwindow* window);
+    void draw(std::vector<HalfEdge*> halfEdges, GLFWwindow* window);
     GLFWwindow* getwindow();
+    
+    // Permet au callback statique d'accéder à la caméra de l'instance
+    camera& getCamera() { return cam; }
 };
