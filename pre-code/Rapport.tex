@@ -54,12 +54,13 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{placeins}
 
 \hypersetup{
     colorlinks=true,
     linkcolor=bleufonce,
     urlcolor=bleufonce,
-    pdftitle={Rapport de projet C++},
+    pdftitle={Rapport de mi-projet C++},
     pdfauthor={Raïan CHOUIREF et Dorian LEON FERNANDES}
 }
 
@@ -71,7 +72,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 
-\fancyhead[L]{\small\textcolor{gris}{Rapport de projet C++}}
+\fancyhead[L]{\small\textcolor{gris}{Rapport de mi-projet C++}}
 \fancyhead[R]{\small\textcolor{gris}{Programmation et géométrie}}
 
 \fancyfoot[L]{\small\textcolor{gris}{Raïan CHOUIREF -- Dorian LEON FERNANDES}}
@@ -105,7 +106,7 @@
 
     \vspace*{2cm}
 
-    {\Large\textcolor{gris}{RAPPORT DE PROJET}\par}
+    {\Large\textcolor{gris}{RAPPORT DE MI-PROJET}\par}
 
     \vspace{1.5cm}
 
@@ -141,7 +142,7 @@
     % \includegraphics[width=3cm]{logo.png}
     % \vspace{1cm}
 
-    {\large Année universitaire : \rule{4cm}{0.4pt}\par}
+    {\large Année universitaire : 2026-2027\par}
 
     \vspace{0.5cm}
 
@@ -169,18 +170,34 @@
 
 % Présenter le sujet, les objectifs et les grandes étapes
 % du projet.
+Ce Projet consiste à développer un éditeur 3D capable de charger, afficher et manipuler des modèles 3D à partir de fichiers au format .PLY et .OBJ.\\
+L'objectif principal est de permettre à l'utilisateur d'interagir avec les modèles 3D de manière intuitive et efficace.\\
+Pour cela, nous devons mettre en place une structure de données adaptée pour représenter les maillages 3D, ainsi qu'un système d'affichage performant utilisant OpenGL.\\
+Les grandes étapes du projet incluent la conception de la structure de données Halfedge, le développement du chargeur de fichiers, l'implémentation du système d'affichage et la création d'une interface utilisateur.\\
 
 \vspace{4cm}
 
 \section{Problème}
 
 % Expliquer le problème étudié et les objectifs à atteindre.
+Dans ce projet, nous sommes confrontés à la problématique de la manipulation et de l'affichage de modèles 3D à partir de fichiers au format .PLY et .OBJ. L'objectif principal est de développer un éditeur 3D capable de charger ces fichiers, d'afficher les modèles correspondants et de permettre à l'utilisateur d'interagir avec eux.\\
+Les objectifs spécifiques du projet incluent :\\
+    - La mise en place d'une structure de données efficace pour représenter les maillages 3D, notamment en utilisant la structure Halfedge.\\
+    - Le développement d'un système d'affichage utilisant OpenGL pour rendre les modèles 3D de manière réaliste et performante.\\
+    - La création d'un chargeur de fichiers capable de lire les formats .PLY et .OBJ, d'extraire les informations géométriques et de les convertir en structures de données utilisables par le programme.\\
 
 \vspace{4cm}
 
 \section{Contexte du projet}
 
 % Présenter le contexte, les outils utilisés et les contraintes.
+  Dans le cadre de la matière Computer Science, nous avons été amenés à réaliser un projet en C++ portant sur la programmation et la géométrie. L'objectif principal de ce projet était de développer un éditeur 3D capable de charger, afficher et manipuler des modèles 3D à partir de fichiers au format .PLY et .OBJ.\\
+  Pour cela, nous avons utilisé plusieurs outils et bibliothèques, notamment OpenGL pour le rendu graphique, ainsi que des structures de données adaptées pour représenter les maillages 3D.\\
+  Les contraintes du projet incluaient la gestion efficace des données géométriques, la mise en place d'une interface utilisateur intuitive et la compatibilité avec différents formats de fichiers 3D. Nous avons également dû nous assurer que notre éditeur 3D soit capable de gérer des modèles complexes tout en maintenant des performances optimales.\\
+  \\
+  Pour le moment, nous avons réussi à implémenter les fonctionnalités de base, le chargemment des fichiers .PLY et .OBJ, ainsi que l'affichage des modèles 3D. Cependant, il reste encore des améliorations à apporter, notamment en ce qui concerne l'optimisation des performances et l'ajout de fonctionnalités supplémentaires pour enrichir l'expérience utilisateur.\\
+
+
 
 \vspace{4cm}
 
@@ -191,13 +208,42 @@
 % Ajouter le diagramme UML et expliquer les classes,
 % leurs attributs, leurs méthodes et leurs relations.
 
-% Exemple pour insérer un diagramme :
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=0.85\textwidth]{uml.png}
-%     \caption{Diagramme UML du projet}
-%     \label{fig:uml}
-% \end{figure}
+ 
+ \begin{figure}[H]
+     \centering
+     \includegraphics[width=1\textwidth]{uml.png}
+     \caption{Diagramme UML du projet}
+     \label{fig:uml}
+ \end{figure}
+
+ Nous avons utilisé un diagramme UML pour représenter les classes et leurs relations dans notre projet. Le diagramme montre les principales classes, leurs attributs et méthodes, ainsi que les associations entre elles. Cela nous a permis de mieux comprendre la structure du projet et de faciliter la communication entre les membres de l'équipe.\\
+ Voici une explication des principales classes et de leurs relations :\\
+
+- La classe `Scene` représente la scène 3D et contient des objets tels que des maillages et des caméras. Elle est responsable de la gestion de l'affichage et de l'interaction avec les objets.\\
+- La classe `Mesh` représente un maillage 3D et contient des informations sur les sommets, les faces et les arêtes. Elle est responsable de la gestion des données géométriques et de la génération des structures de données nécessaires pour l'affichage.\\
+- La classe `Halfedge` représente une structure de données pour les maillages, permettant une navigation efficace entre les sommets, les arêtes et les faces. Elle est utilisée pour faciliter les opérations de modification et d'affichage des maillages.\\
+ 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{mesh.png}
+    \caption{Diagramme UML de la structure Mesh}
+    \label{fig:uml_mesh}
+\end{figure}
+Dans cette partie, nous voyons le diagramme UML de la structure du Mesh, qui représente un maillage 3D. La classe `Mesh` contient des attributs pour stocker les sommets, les faces et les arêtes du maillage, ainsi que des méthodes pour gérer ces éléments. Les relations entre les classes sont également représentées, montrant comment elles interagissent pour former la structure globale du projet.\\
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{loader.png}
+    \caption{Diagramme UML du Loader}
+    \label{fig:uml_loader}
+\end{figure}
+
+Pour le loader, nous avons utilisé une classe générique pour permettre le chargement de différents formats de fichiers.\\
+Grâce a cela nous avons pu créer des classes spécifiques pour chaque format de fichier, telles que `PLYLoader` et `OBJLoader`, qui héritent de la classe générique `Loader`. Cela nous a permis de gérer facilement l'ajout de nouveaux formats de fichiers à l'avenir.
+
+
+
 
 \vspace{4cm}
 
@@ -214,6 +260,24 @@
 
 % Présenter le système d'affichage, OpenGL, le rendu
 % graphique et les interactions éventuelles.
+Pour l'affichage, nous avons utilisé la bibliothèque OpenGL, qui est une API graphique puissante et flexible pour le rendu 2D et 3D. OpenGL nous permet de créer des scènes 3D interactives et de gérer les transformations, l'éclairage et les textures.\\
+Voici les sommets d'un cube que nous avons utilisé pour tester l'affichage dans notre éditeur 3D :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{point.jpeg}
+    \caption{Sommets d'un cube pour le test d'affichage}
+    \label{fig:cube}
+\end{figure}
+Ainsi que les faces trianfulaires de ce dernier :
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{ligne.jpeg}
+    \caption{Faces triangulaires d'un cube pour le test d'affichage}
+    \label{fig:cube_faces}
+\end{figure} 
+
+Par rapport au déplacement de la caméra, seul les déplacements grâce aux touches ZQSD sont implémentés pour le moment. Le déplacement de la caméra est réalisé en modifiant la position de la caméra dans l'espace 3D en fonction des entrées de l'utilisateur. Nous avons également prévu d'ajouter des fonctionnalités supplémentaires, telles que le zoom et la rotation de la caméra, pour améliorer l'expérience utilisateur.\\
+
 
 \vspace{4cm}
 

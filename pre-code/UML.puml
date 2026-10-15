@@ -1,144 +1,117 @@
 @startuml
-title 3D Editor - Class Diagram
-
 skinparam classAttributeIconSize 0
+skinparam monochrome true
 skinparam shadowing false
 
-
-
-package "3D Editor" {
-
-    class Editor3D {
-        - scene : Scene*
-        - camera : Camera*
-        + createObject() : Object3D*
-        + deleteObject( Object3D*) : void
-        + selectObject( Object3D*) : void
-        + render() : void
-    }
-
-    class Scene {
-        - objects : vector<Object3D*>
-        + addObject( Object3D*) : void
-        + removeObject(Object3D*) : void
-        + getObjects() : vector<Object3D*>
-    }
-
-    class Object3D {
-        - name : string
-        - mesh : Mesh*
-        - transform : Transform
-        + getMesh() : Mesh*
-        + getTransform() : Transform&
-        + setMesh( Mesh*) : void
-    }
-
-    class Transform {
-        - position : Vector3
-        - rotation : Vector3
-        - scale : Vector3
-        + translate( Vector3) : void
-        + rotate( Vector3) : void
-        + scale( Vector3) : void
-
-    }
-
-    class Camera {
-        - position : Vector3
-        - rotation : Vector3
-        - fov : float
-        - nearPlane : float
-        - farPlane : float
-        + move( Vector3) : void
-        + rotate( Vector3) : void
-    }
-
-    Editor3D  -->  Scene 
-    Editor3D  -->  Camera 
-
-    Scene *--  Object3D 
-
-    Object3D  *--  Transform 
-    Object3D  -->  Mesh 
+class camera {
+    - position : glm::vec3
+    - front : glm::vec3
+    - up : glm::vec3
+    - yaw : float
+    - pitch : float
+    - speed : float
+    - sensitivity : float
+    + camera(startPosition : glm::vec3, startUp : glm::vec3, startYaw : float, startPitch : float)
+    + processKeyboardInput(window : GLFWwindow*, deltaTime : float) : void
+    + processMouseMovement(xoffset : float, yoffset : float) : void
+    + getViewMatrix() : glm::mat4
 }
 
-
-
-
-package "HalfEdge" {
-
-    class Mesh {
-        - vertices : vector<Vertex*>
-        - edges : vector<Edge*>
-        - halfEdges : vector<HalfEdge*>
-        - faces : vector<Face*>
-
-        + addVertex() : Vertex
-        + addEdge() : Edge
-        + addFace() : Face
-        + removeVertex( Vertex*) 
-        + removeEdge( Edge*) 
-        + removeFace( Face*) 
-    }
-
-    class Vertex {
-        - position : vector<double>
-        - halfEdge : HalfEdge*
-
-        + getPosition() : vector<double>
-        + setPosition( vector<double>) : void
-        + getHalfEdge() : HalfEdge*
-    }
-
-    class Edge {
-        - halfEdge : HalfEdge*
-
-        + getHalfEdge() : HalfEdge*
-    }
-
-    class HalfEdge {
-        - origin : Vertex*
-        - twin : HalfEdge*
-        - next : HalfEdge*
-        - prev : HalfEdge*
-        - edge : Edge*
-        - face : Face*
-
-        + getOrigin() : Vertex*
-        + getTwin() : HalfEdge*
-        + getNext() : HalfEdge*
-        + getPrev() : HalfEdge*
-        + getEdge() : Edge*
-        + getFace() : Face*
-    }
-
-    class Face {
-        - halfEdge : HalfEdge*
-
-        + getHalfEdge() : HalfEdge*
-        + getVertices() : vector<Vertex*>
-    }
-
+class Editor3D {
     
-
-    Mesh  *--  Vertex 
-    Mesh  *--  Edge 
-    Mesh  *--  HalfEdge 
-    Mesh  *--  Face 
-
-
-
-    Edge  -->  HalfEdge 
-
-    HalfEdge  -->  Vertex 
-
-    HalfEdge  -->  Edge 
-    HalfEdge  -->  Face 
-
-    Face  -->  HalfEdge 
 }
 
+class Face {
+    - halfedge : HalfEdge*
+    + getHalfEdge() : HalfEdge*
+    + setHalfEdge(he : HalfEdge*) : void
+}
 
+class HalfEdge {
+    - target : Vertex*
+    - next : HalfEdge*
+    - twin : HalfEdge*
+    - face : Face*
+    + Target() : Vertex*
+    + Next() : HalfEdge*
+    + Twin() : HalfEdge*
+    + getFace() : Face*
+    + setTarget(vtx : Vertex*) : void
+    + setNext(he : HalfEdge*) : void
+    + setTwin(he : HalfEdge*) : void
+    + setFace(newface : Face*) : void
+}
 
+abstract class Loader {
+    # tabPoint : std::vector<std::vector<float>>
+    # tabFace : std::vector<std::vector<int>>
+    + {abstract} LoadFile(filePath : std::string) : void = 0
+    + GetPoints() : const std::vector<std::vector<float>>&
+    + GetFaces() : const std::vector<std::vector<int>>&
+}
+
+class Mesh {
+    - tabVertex : std::vector<Vertex*>
+    - tabFace : std::vector<Face*>
+    - tabHE : std::vector<HalfEdge*>
+    + Mesh(V : std::vector<std::vector<float>>, F : std::vector<std::vector<int>>)
+    + ~Mesh()
+    + addVertex(newvertex : Vertex*) : void
+    + addFace(newface : Face*) : void
+    + getVertices() : const std::vector<Vertex*>&
+    + getFaces() : const std::vector<Face*>&
+    + getHalfEdges() : const std::vector<HalfEdge*>&
+}
+
+class ObjLoader {
+    + LoadFile(filePath : std::string) : void override
+}
+
+class PlyLoader {
+    + LoadFile(filePath : std::string) : void override
+}
+
+class Scene {
+    - vertexShaderSource : const char*
+    - fragmentShaderSource : const char*
+    - windowPtr : GLFWwindow*
+    - cam : camera
+    - lastX : float
+    - lastY : float
+    - firstMouse : bool
+    - framebuffer_size_callback(window : GLFWwindow*, width : int, height : int) : void
+    - {static} key_callback(window : GLFWwindow*, key : int, scancode : int, action : int, mods : int) : void
+    - {static} mouse_callback(window : GLFWwindow*, xposIn : double, yposIn : double) : void
+    + Scene()
+    + window() : void
+    + update() : void
+    + draw(halfEdges : std::vector<HalfEdge*>, window : GLFWwindow*) : void
+    + getwindow() : GLFWwindow*
+    + getCamera() : camera&
+}
+
+class Vertex {
+    - x : float
+    - y : float
+    - z : float
+    - halfedge : HalfEdge*
+    + getPosition() : std::array<float, 3>
+    + getHalfEdge() : HalfEdge*
+    + setPosition(newX : float, newY : float, newZ : float) : void
+    + setHalfEdge(he : HalfEdge*) : void
+}
+
+' Relations
+Loader <|-- ObjLoader : hérite
+Loader <|-- PlyLoader : hérite
+Mesh o-- Vertex : tabVertex
+Mesh o-- Face : tabFace
+Mesh o-- HalfEdge : tabHE
+Face --> HalfEdge : halfedge
+Vertex --> HalfEdge : halfedge
+HalfEdge --> Vertex : target
+HalfEdge --> HalfEdge : next / twin
+HalfEdge --> Face : face
+Scene *-- camera : cam
 
 @enduml

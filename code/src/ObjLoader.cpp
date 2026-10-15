@@ -26,9 +26,11 @@ void ObjLoader::LoadFile(std::string filePath) {
 
         std::istringstream iss(line);
         std::string prefix;
+        std::cout << line << std::endl;
 
         if (!(iss >> prefix)) continue; // Skip empty lines
         iss >> prefix;
+        std::cout << prefix << std::endl;
         
         if (prefix == "v") {
             float x, y, z;
@@ -42,6 +44,7 @@ void ObjLoader::LoadFile(std::string filePath) {
             v1 = std::stoi(vertex1);
             v2 = std::stoi(vertex2);
             v3 = std::stoi(vertex3);
+            std::cout << "Face indices: " << v1 << ", " << v2 << ", " << v3 << std::endl;
             
             tabFace.push_back({static_cast<int>(v1 - 1), static_cast<int>(v2 - 1), static_cast<int>(v3 - 1)});
         }

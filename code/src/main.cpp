@@ -12,7 +12,7 @@ int main() {
     
     Scene scene;
     PlyLoader loader;
-    loader.LoadFile("/mnt/c/Users/raian/Documents/GitHub/3D_editor/3DModels/Cube.PLY");
+    loader.LoadFile("/mnt/c/Users/raian/Documents/GitHub/3D_editor/3DModels/Socket cap screw.ply");
     Mesh mesh(loader.GetPoints(), loader.GetFaces());
     
     std::cout << "test1" << std::endl;
