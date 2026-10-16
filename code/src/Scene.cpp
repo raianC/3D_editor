@@ -140,8 +140,8 @@ for (HalfEdge* he : halfEdges)
     if (origin == nullptr || target == nullptr)
         continue;
 
-    std::array<float, 3> posOrg = origin->getPosition();
-    std::array<float, 3> posTar = target->getPosition();
+    Eigen::Vector3d posOrg = origin->getPosition();
+    Eigen::Vector3d posTar = target->getPosition();
 
     // 1. Premier point de la ligne (Départ)
     vertices.push_back(posOrg[0]);

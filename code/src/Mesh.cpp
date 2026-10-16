@@ -4,7 +4,7 @@
 
 
 
-Mesh::Mesh(std::vector<std::vector<float>> V,std::vector<std::vector<int>> F){
+Mesh::Mesh(std::vector<Eigen::Vector3d> V,std::vector<std::vector<int>> F){
     tabVertex.resize(V.size());
     tabFace.resize(F.size());
     tabHE.resize(3*F.size());
@@ -12,7 +12,7 @@ Mesh::Mesh(std::vector<std::vector<float>> V,std::vector<std::vector<int>> F){
     // Initialisation du tableau de Vertex
     for (int i=0; i<V.size(); ++i){
         Vertex* temp = new Vertex;
-        temp->setPosition(V[i][0],V[i][1],V[i][2]);
+        temp->setPosition(V[i]);
         temp->setHalfEdge(nullptr);
         tabVertex[i]=temp;
     }
@@ -87,6 +87,13 @@ Mesh::Mesh(std::vector<std::vector<float>> V,std::vector<std::vector<int>> F){
             }
         }
     }
+
+    //Determination du barycentre
+    gravcenter = Eigen::Vector3d(0,0,0);
+    for (int i=0; i<V.size(); ++i){
+        gravcenter += V[i];
+    }
+    gravcenter /= static_cast<double>(V.size());
 }
 
 Mesh::~Mesh(){

@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {2}Problème}{1}{section.2}%
 \contentsline {section}{\numberline {3}Contexte du projet}{2}{section.3}%
 \contentsline {section}{\numberline {4}UML}{3}{section.4}%
-\contentsline {section}{\numberline {5}Halfedge}{5}{section.5}%
-\contentsline {section}{\numberline {6}Affichage}{6}{section.6}%
-\contentsline {section}{\numberline {7}Loader}{7}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{8}{section.8}%
+\contentsline {section}{\numberline {5}Loader}{6}{section.5}%
+\contentsline {section}{\numberline {6}Halfedge}{7}{section.6}%
+\contentsline {section}{\numberline {7}Affichage}{8}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{10}{section.8}%

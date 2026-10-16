@@ -6,3 +6,4 @@ Students :
 
 
 lib a installer: sudo apt install build-essential cmake git libglfw3-dev
+                 sudo apt install libeigen3-dev

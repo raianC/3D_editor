@@ -1,16 +1,17 @@
 //vertex.hpp
 
 #pragma once
-#include <array>
+#include <Eigen>
+
 class HalfEdge;
 
 class Vertex {
     private:
-        float x,y,z;
+        Eigen::Vector3d position;
         HalfEdge* halfedge;
     public:
-        std::array<float, 3> getPosition();
+        Eigen::Vector3d getPosition();
         HalfEdge* getHalfEdge();
-        void setPosition(float newX,float newY,float newZ);
+        void setPosition(Eigen::Vector3d newPosition);
         void setHalfEdge(HalfEdge* he);
 };

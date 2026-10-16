@@ -35,6 +35,7 @@ void ObjLoader::LoadFile(std::string filePath) {
         if (prefix == "v") {
             float x, y, z;
             iss >> x >> y >> z;
+            std::cout << " X = " << x << " Y = " << y << " Z = " << z << std::endl;
             tabPoint.push_back({x, y, z});
         } else if (prefix == "f") {
             int v1, v2, v3;

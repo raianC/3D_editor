@@ -3,16 +3,16 @@
 #include "HalfEdge.hpp"
 
 
-std::array<float, 3> Vertex::getPosition(){
-    return {x, y, z};
+Eigen::Vector3d Vertex::getPosition(){
+    return position;
 }
 
 HalfEdge* Vertex::getHalfEdge(){
     return halfedge;
 }
 
-void Vertex::setPosition(float newX,float newY,float newZ){
-    x = newX; y = newY; z = newZ;
+void Vertex::setPosition(Eigen::Vector3d newPosition){
+    position = newPosition;
 }
 
 void Vertex::setHalfEdge(HalfEdge* he){

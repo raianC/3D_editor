@@ -73,7 +73,7 @@
 \fancyhf{}
 
 \fancyhead[L]{\small\textcolor{gris}{Rapport de mi-projet C++}}
-\fancyhead[R]{\small\textcolor{gris}{Programmation et géométrie}}
+\fancyhead[R]{\small\textcolor{gris}{Modélisateur 3D}}
 
 \fancyfoot[L]{\small\textcolor{gris}{Raïan CHOUIREF -- Dorian LEON FERNANDES}}
 \fancyfoot[R]{\small\textcolor{gris}{Page \thepage}}
@@ -219,9 +219,9 @@ Les objectifs spécifiques du projet incluent :\\
  Nous avons utilisé un diagramme UML pour représenter les classes et leurs relations dans notre projet. Le diagramme montre les principales classes, leurs attributs et méthodes, ainsi que les associations entre elles. Cela nous a permis de mieux comprendre la structure du projet et de faciliter la communication entre les membres de l'équipe.\\
  Voici une explication des principales classes et de leurs relations :\\
 
-- La classe `Scene` représente la scène 3D et contient des objets tels que des maillages et des caméras. Elle est responsable de la gestion de l'affichage et de l'interaction avec les objets.\\
-- La classe `Mesh` représente un maillage 3D et contient des informations sur les sommets, les faces et les arêtes. Elle est responsable de la gestion des données géométriques et de la génération des structures de données nécessaires pour l'affichage.\\
-- La classe `Halfedge` représente une structure de données pour les maillages, permettant une navigation efficace entre les sommets, les arêtes et les faces. Elle est utilisée pour faciliter les opérations de modification et d'affichage des maillages.\\
+- La classe \texttt{Scene} représente la scène 3D et contient des objets tels que des maillages et des caméras. Elle est responsable de la gestion de l'affichage et de l'interaction avec les objets.\\
+- La classe \texttt{Mesh} représente un maillage 3D et contient des informations sur les sommets, les faces et les arêtes. Elle est responsable de la gestion des données géométriques et de la génération des structures de données nécessaires pour l'affichage.\\
+- La classe \texttt{Halfedge} représente une structure de données pour les maillages, permettant une navigation efficace entre les sommets, les arêtes et les faces. Elle est utilisée pour faciliter les opérations de modification et d'affichage des maillages.\\
  
 \begin{figure}[H]
     \centering
@@ -229,7 +229,7 @@ Les objectifs spécifiques du projet incluent :\\
     \caption{Diagramme UML de la structure Mesh}
     \label{fig:uml_mesh}
 \end{figure}
-Dans cette partie, nous voyons le diagramme UML de la structure du Mesh, qui représente un maillage 3D. La classe `Mesh` contient des attributs pour stocker les sommets, les faces et les arêtes du maillage, ainsi que des méthodes pour gérer ces éléments. Les relations entre les classes sont également représentées, montrant comment elles interagissent pour former la structure globale du projet.\\
+Dans cette partie, nous voyons le diagramme UML de la structure du Mesh, qui représente un maillage 3D. La classe \texttt{Mesh} contient des attributs pour stocker les sommets, les faces et les arêtes du maillage, ainsi que des méthodes pour gérer ces éléments. Les relations entre les classes sont également représentées, montrant comment elles interagissent pour former la structure globale du projet.\\
 
 
 \begin{figure}[H]
@@ -240,17 +240,53 @@ Dans cette partie, nous voyons le diagramme UML de la structure du Mesh, qui rep
 \end{figure}
 
 Pour le loader, nous avons utilisé une classe générique pour permettre le chargement de différents formats de fichiers.\\
-Grâce a cela nous avons pu créer des classes spécifiques pour chaque format de fichier, telles que `PLYLoader` et `OBJLoader`, qui héritent de la classe générique `Loader`. Cela nous a permis de gérer facilement l'ajout de nouveaux formats de fichiers à l'avenir.
+Grâce a cela nous avons pu créer des classes spécifiques pour chaque format de fichier, telles que \texttt{PLYLoader} et \texttt{OBJLoader}, qui héritent de la classe générique \texttt{Loader}. Cela nous a permis de gérer facilement l'ajout de nouveaux formats de fichiers à l'avenir.
 
 
 
 
 \vspace{4cm}
+\newpage
+\section{Loader}
 
+% Expliquer le chargement des fichiers .PLY et .OBJ,
+% leur lecture et la conversion des données en structures
+% utilisables par le programme.
+ 
+Le système de chargement des fichiers de notre projet repose actuellement sur deux classes spécifiques, \texttt{PlyLoader} et \texttt{ObjLoader}, qui héritent toutes deux de la classe générique \texttt{Loader}.
+
+La classe \texttt{PlyLoader} permet de charger les fichiers au format \texttt{.ply}, qu'ils soient encodés en ASCII ou en binaire au format \textit{Little Endian}. Elle commence par lire l'en-tête du fichier afin d'en déterminer le format, le nombre de sommets, le nombre de faces, les types de données utilisés (\texttt{double}, \texttt{float}, \texttt{int}), ainsi que la présence éventuelle de propriétés supplémentaires, telles que la couleur ou l'opacité.
+L'implémentation de ce chargeur a notamment nécessité la gestion des octets à ignorer lors de la lecture des données binaires, par exemple ceux correspondant au remplissage (\textit{padding}) ou à des propriétés qui ne sont pas exploitées par le programme. Nous avons utilisé des outils d'intelligence artificielle, notamment ChatGPT, pour nous aider à mettre en œuvre cette gestion et à découvrir des outils C++ adaptés, comme \texttt{std::istringstream}, qui facilite l'analyse des données au format ASCII.
+
+La classe \texttt{ObjLoader} permet de charger les fichiers au format \texttt{.obj}. Elle analyse chaque ligne du fichier en fonction de son préfixe afin de distinguer les sommets, identifiés par \texttt{v}, des faces, identifiées par \texttt{f}. L'utilisation de \texttt{std::istringstream} permet de séparer et d'extraire facilement les différentes valeurs présentes sur chaque ligne.
+
+Enfin, les deux classes stockent les données extraites dans deux tableaux : \texttt{tabPoint} et \texttt{tabFace}. Le premier contient les coordonnées des sommets sous la forme d'un \texttt{std::vector<Eigen::Vector3d>}, tandis que le second contient les faces sous la forme d'un \texttt{std::vector<std::vector<int>>}. Cette organisation permet de représenter les sommets et la connectivité du modèle 3D dans des structures de données directement exploitables par le reste du programme.
+
+\vspace{4cm}
+\newpage
 \section{Halfedge}
 
 % Expliquer la structure Halfedge, son fonctionnement,
 % les liens entre les éléments et son utilisation dans le projet.
+
+Notre structure Halfedge repose sur trois classes étroitement liées : \texttt{Vertex}, \texttt{Face} et \texttt{HalfEdge}.
+
+%\begin{figure}[H]
+%    \centering
+%    \includegraphics[width=0.55\textwidth]{HalfEdge.png}
+%    \caption{Représentation de la structure Halfedge}
+%    \label{fig:halfedge}
+%\end{figure}
+
+La classe \texttt{Vertex} représente les sommets du maillage. Chaque sommet possède notamment une position, stockée sous la forme d'un \texttt{Eigen::Vector3d}, ainsi qu'un pointeur vers un objet \texttt{HalfEdge*} qui lui est associé.
+
+La classe \texttt{Face} représente les faces triangulaires du maillage. Elle contient un pointeur vers l'un des objets \texttt{HalfEdge} qui la constituent, de type \texttt{HalfEdge*}. Les autres objets \texttt{HalfEdge} de la face peuvent ensuite être retrouvés en parcourant les liens entre eux.
+
+La classe \texttt{HalfEdge} constitue le cœur de cette structure de données. Chaque objet \texttt{HalfEdge} contient plusieurs informations permettant de décrire sa position dans le maillage : un pointeur vers le sommet cible (\textit{target}), de type \texttt{Vertex*}, un pointeur vers l'objet \texttt{HalfEdge} suivant (\textit{next}), un pointeur vers son opposé (\textit{twin}), ainsi qu'un pointeur vers la face à laquelle il appartient (\texttt{Face*}).
+
+L'organisation de ces liens permet de parcourir efficacement le maillage et d'accéder aux éléments voisins. Elle vise également à faciliter les opérations de modification de la géométrie et de la topologie du maillage. Cependant, Ces fonctionnalités ne sont pas encore implémentées dans le projet.
+
+La structure du maillage est générée par la classe \texttt{Mesh}, à partir des tableaux de sommets et de faces fournis par le module de chargement (\texttt{Loader}). Les éléments sont ensuite organisés dans trois tableaux : \texttt{tabVertex}, \texttt{tabFace} et \texttt{tabHE}, qui contiennent respectivement les sommets, les faces et les objets \texttt{HalfEdge} du maillage.
 
 \vspace{4cm}
 
@@ -260,7 +296,7 @@ Grâce a cela nous avons pu créer des classes spécifiques pour chaque format d
 
 % Présenter le système d'affichage, OpenGL, le rendu
 % graphique et les interactions éventuelles.
-Pour l'affichage, nous avons utilisé la bibliothèque OpenGL, qui est une API graphique puissante et flexible pour le rendu 2D et 3D. OpenGL nous permet de créer des scènes 3D interactives et de gérer les transformations, l'éclairage et les textures.\\
+Pour l'affichage, nous avons utilisé la bibliothèque \texttt{OpenGL}, qui est une API graphique puissante et flexible pour le rendu 2D et 3D. OpenGL nous permet de créer des scènes 3D interactives et de gérer les transformations, l'éclairage et les textures.\\
 Voici les sommets d'un cube que nous avons utilisé pour tester l'affichage dans notre éditeur 3D :
 \begin{figure}[H]
     \centering
@@ -281,23 +317,19 @@ Par rapport au déplacement de la caméra, seul les déplacements grâce aux tou
 
 \vspace{4cm}
 
-\section{Loader}
 
-% Expliquer le chargement des fichiers .PLY et .OBJ,
-% leur lecture et la conversion des données en structures
-% utilisables par le programme.
 
-\vspace{4cm}
 
-% =================================================
-% CONCLUSION (À COMPLÉTER SI NÉCESSAIRE)
-% =================================================
 \newpage
 
 \section{Conclusion}
 
 % Faire le bilan du projet, présenter les difficultés
 % rencontrées et les améliorations possibles.
+
+La majorité des bases structurelles du projet a été mise en place. Cependant, plusieurs fonctionnalités restent à développer afin d'atteindre les objectifs fixés.
+La principale difficulté rencontrée au cours du projet est notre manque d'expérience en C++, notamment dans l'utilisation d'OpenGL, ainsi que notre connaissance encore limitée des différentes fonctions proposées par les bibliothèques que nous utilisons. Cela nous a demandé du temps pour comprendre leur fonctionnement et les utiliser correctement.
+Plusieurs fonctionnalités restent à implémenter pour la suite du projet, comme la modification de la géométrie du modèle chargé, le calcul du plus court chemin entre deux sommets quelconques, l'optimisation des performances du programme, ainsi qu'une meilleure gestion des erreurs et des éventuels plantages.
 
 \vspace{5cm}
 

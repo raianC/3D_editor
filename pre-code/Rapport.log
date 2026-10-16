@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.10)  15 OCT 2026 14:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.10)  16 OCT 2026 11:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/raian/Documents/GitHub/3D_editor/pre-code/Rapport.tex
-(c:/Users/raian/Documents/GitHub/3D_editor/pre-code/Rapport.tex
+**c:/Users/ghost/Documents/GitHub/3D_editor/pre-code/Rapport.tex
+(c:/Users/ghost/Documents/GitHub/3D_editor/pre-code/Rapport.tex
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
 (c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -538,6 +538,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--221
 
  []
 
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 222.
+(c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
 Underfull \hbox (badness 10000) in paragraph at lines 222--225
 
@@ -553,48 +561,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
-<loader.png, id=74, 382.93062pt x 258.9675pt>
+<loader.png, id=75, 382.93062pt x 258.9675pt>
 File: loader.png Graphic file (type png)
 <use loader.png>
 Package pdftex.def Info: loader.png  used on input line 237.
 (pdftex.def)             Requested size: 244.1261pt x 165.09846pt.
-[4 <./mesh.png>] [5 <./loader.png>]
-<point.jpeg, id=88, 816.04875pt x 659.46375pt>
+[4 <./mesh.png>] [5 <./loader.png>] [6] [7]
+<point.jpeg, id=98, 816.04875pt x 659.46375pt>
 File: point.jpeg Graphic file (type jpg)
 <use point.jpeg>
-Package pdftex.def Info: point.jpeg  used on input line 267.
+Package pdftex.def Info: point.jpeg  used on input line 303.
 (pdftex.def)             Requested size: 221.9316pt x 179.3456pt.
-<ligne.jpeg, id=89, 811.03pt x 648.4225pt>
+<ligne.jpeg, id=99, 811.03pt x 648.4225pt>
 File: ligne.jpeg Graphic file (type jpg)
 <use ligne.jpeg>
-Package pdftex.def Info: ligne.jpeg  used on input line 274.
+Package pdftex.def Info: ligne.jpeg  used on input line 310.
 (pdftex.def)             Requested size: 221.9316pt x 177.43121pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
-[6 <./point.jpeg> <./ligne.jpeg>] [7] [8] (./Rapport.aux)
+[8 <./point.jpeg> <./ligne.jpeg>] [9] [10] (./Rapport.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
  ***********
 Package rerunfilecheck Info: File `Rapport.out' has not changed.
-(rerunfilecheck)             Checksum: 5B1CC4D895FD69739F0054FE5F96C573;723.
+(rerunfilecheck)             Checksum: B11656A079CB1816DAEAA939AF197F81;723.
  ) 
 Here is how much of TeX's memory you used:
- 14932 strings out of 467099
- 246022 string characters out of 5412502
- 722150 words of memory out of 5000000
- 43981 multiletter control sequences out of 15000+600000
- 673752 words of font info for 107 fonts, out of 8000000 for 9000
+ 15015 strings out of 467099
+ 247183 string characters out of 5412502
+ 722126 words of memory out of 5000000
+ 44029 multiletter control sequences out of 15000+600000
+ 679720 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,13n,79p,1055b,504s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr17.pfb>
-Output written on Rapport.pdf (10 pages, 333252 bytes).
+<c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on Rapport.pdf (12 pages, 381071 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 26714 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
+ 25 named destinations out of 1000 (max. 500000)
+ 29274 words of extra memory for PDF output out of 29859 (max. 10000000)
 

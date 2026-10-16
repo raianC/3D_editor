@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/raian/Documents/GitHub/3D_editor/code/src/Loader.cpp" "CMakeFiles/Loader.dir/src/Loader.cpp.o" "gcc" "CMakeFiles/Loader.dir/src/Loader.cpp.o.d"
+  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/src/Loader.cpp" "CMakeFiles/Loader.dir/src/Loader.cpp.o" "gcc" "CMakeFiles/Loader.dir/src/Loader.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

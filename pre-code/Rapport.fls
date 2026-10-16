@@ -1,8 +1,8 @@
-PWD c:/Users/raian/Documents/GitHub/3D_editor/pre-code
+PWD c:/Users/ghost/Documents/GitHub/3D_editor/pre-code
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/raian/Documents/GitHub/3D_editor/pre-code/Rapport.tex
+INPUT c:/Users/ghost/Documents/GitHub/3D_editor/pre-code/Rapport.tex
 OUTPUT Rapport.log
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -200,6 +200,10 @@ INPUT ./uml.png
 INPUT ./uml.png
 INPUT ./uml.png
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
+INPUT c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmtt.fd
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmtt12.tfm
 INPUT ./mesh.png
 INPUT ./mesh.png
 INPUT ./mesh.png
@@ -210,6 +214,7 @@ INPUT ./loader.png
 INPUT ./loader.png
 INPUT ./loader.png
 INPUT ./loader.png
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT ./point.jpeg
 INPUT ./point.jpeg
 INPUT ./point.jpeg
@@ -228,3 +233,5 @@ INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr17.pfb
+INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pfb
+INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt12.pfb

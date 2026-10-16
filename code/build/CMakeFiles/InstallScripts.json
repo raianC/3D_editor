@@ -1,0 +1,14 @@
+{
+	"InstallScripts" : 
+	[
+		"/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/cmake_install.cmake",
+		"/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/cmake_install.cmake",
+		"/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/src/cmake_install.cmake",
+		"/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/docs/cmake_install.cmake",
+		"/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/Eigen/cmake_install.cmake",
+		"/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/Eigen/unsupported/cmake_install.cmake",
+		"/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/Eigen/unsupported/Eigen/cmake_install.cmake",
+		"/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/Eigen/unsupported/Eigen/CXX11/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
