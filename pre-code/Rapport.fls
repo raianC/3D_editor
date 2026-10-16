@@ -1,8 +1,8 @@
-PWD c:/Users/ghost/Documents/GitHub/3D_editor/pre-code
+PWD c:/Users/raian/Documents/GitHub/3D_editor/pre-code
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/ghost/Documents/GitHub/3D_editor/pre-code/Rapport.tex
+INPUT c:/Users/raian/Documents/GitHub/3D_editor/pre-code/Rapport.tex
 OUTPUT Rapport.log
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
