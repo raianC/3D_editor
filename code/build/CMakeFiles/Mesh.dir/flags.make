@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/include
+CXX_INCLUDES = -I/home/nyros-veilteus/Documents/GitHub/3D_editor/code/include -isystem /usr/include/eigen3
 
 CXX_FLAGS = -g -O0 -std=gnu++17
 

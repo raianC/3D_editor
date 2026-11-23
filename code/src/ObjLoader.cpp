@@ -26,14 +26,13 @@ void ObjLoader::LoadFile(std::string filePath) {
 
         std::istringstream iss(line);
         std::string prefix;
-        std::cout << line << std::endl;
-
+        //std::cout << line << std::endl;
+        
         if (!(iss >> prefix)) continue; // Skip empty lines
-        iss >> prefix;
-        std::cout << prefix << std::endl;
+        
         
         if (prefix == "v") {
-            float x, y, z;
+            double x, y, z;
             iss >> x >> y >> z;
             std::cout << " X = " << x << " Y = " << y << " Z = " << z << std::endl;
             tabPoint.push_back({x, y, z});

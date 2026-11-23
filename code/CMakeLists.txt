@@ -13,7 +13,7 @@ set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 include_directories(include/)
 
 add_subdirectory(glfw-3.5.1)
-add_subdirectory(Eigen)
+find_package(Eigen3 REQUIRED)
 
 add_library(Face src/Face.cpp)
 add_library(Editor3D src/Editor3D.cpp)
@@ -32,7 +32,7 @@ target_link_libraries(Mesh PRIVATE
     Vertex
     Face
     HalfEdge
-    Eigen
+    Eigen3::Eigen
 )
 
 target_link_libraries(Scene PRIVATE
@@ -43,4 +43,4 @@ target_link_libraries(Scene PRIVATE
 
 add_executable(main src/main.cpp)
 
-target_link_libraries(main Eigen Face Vertex HalfEdge Mesh glad glfw Scene Editor3D cam Loader PlyLoader ObjLoader OpenGL::GL)
+target_link_libraries(main Eigen3::Eigen Face Vertex HalfEdge Mesh glad glfw Scene Editor3D cam Loader PlyLoader ObjLoader OpenGL::GL)

@@ -1,6 +1,8 @@
 //Mesh.cpp
 
 #include "Mesh.hpp"
+#include <iostream>
+
 
 
 
@@ -16,6 +18,7 @@ Mesh::Mesh(std::vector<Eigen::Vector3d> V,std::vector<std::vector<int>> F){
         temp->setHalfEdge(nullptr);
         tabVertex[i]=temp;
     }
+    std::cout << "Vertices initialized: " << std::endl;
 
     // Initialisation du tableau de Face
     for (int i=0; i<F.size(); ++i){
@@ -23,6 +26,7 @@ Mesh::Mesh(std::vector<Eigen::Vector3d> V,std::vector<std::vector<int>> F){
         temp->setHalfEdge(nullptr);
         tabFace[i]=temp;
     }
+    std::cout << "Faces initialized: " << std::endl;
 
     struct SortedEdge{
         int v1,v2;
@@ -76,24 +80,34 @@ Mesh::Mesh(std::vector<Eigen::Vector3d> V,std::vector<std::vector<int>> F){
 
         tabHE[3*i] = pHE0; tabHE[3*i+1] = pHE1; tabHE[3*i+2] = pHE2;
     }
+    std::cout << "HalfEdges initialized, twins left to determine " << std::endl;
 
     // Determination des twins
     std::sort(edgeList.begin(), edgeList.end());
     for (int i=0; i<edgeList.size(); ++i){
+        if (edgeList[i].he->Twin() != nullptr) continue; // Si le twin est déjà trouvé, on peut sortir de la boucle interne
         for (int j=i+1; j<edgeList.size(); ++j){
+            // Si les arêtes ne sont pas identiques, on peut sortir de la boucle interne
+            if (edgeList[j].maxv != edgeList[i].maxv || edgeList[j].minv != edgeList[i].minv) break;
+
+            if (edgeList[j].he->Twin() != nullptr) continue;   // Si le twin est déjà trouvé, on peut sortir de la boucle interne
+
             if (edgeList[i].v1 == edgeList[j].v2 && edgeList[i].v2 == edgeList[j].v1){
                 edgeList[i].he->setTwin(edgeList[j].he);
                 edgeList[j].he->setTwin(edgeList[i].he);
+                break; // On peut sortir de la boucle interne une fois le twin trouvé
             }
         }
     }
 
+    std::cout << "Twins determined" << std::endl;
     //Determination du barycentre
     gravcenter = Eigen::Vector3d(0,0,0);
     for (int i=0; i<V.size(); ++i){
         gravcenter += V[i];
     }
     gravcenter /= static_cast<double>(V.size());
+    std::cout << "Gravity center determined: " << gravcenter.transpose() << std::endl;
 }
 
 Mesh::~Mesh(){

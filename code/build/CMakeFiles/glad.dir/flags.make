@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/include
+C_INCLUDES = -I/home/nyros-veilteus/Documents/GitHub/3D_editor/code/include
 
 C_FLAGS = -g
 

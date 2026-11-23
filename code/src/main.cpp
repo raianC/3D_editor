@@ -3,47 +3,49 @@
 #include "Scene.hpp"
 #include "camera.hpp"
 #include "Loader.hpp"
-#include "PLYLoader.hpp"
+#include "PlyLoader.hpp"
 #include "ObjLoader.hpp"
 
 
 
 int main() {
-    std::string filePath = "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/3DModels/cube.obj";
+    std::string filePath = "/home/nyros-veilteus/Documents/GitHub/3D_editor/3DModels/Fantasy Dragon.ply";
     Scene scene;
     if (filePath.empty()) {
         std::cerr << "Erreur : Aucun fichier spécifié." << std::endl;
         return -1;
     }
-    else if (filePath.substr(filePath.find_last_of(".") + 1) == "PLY") {
+    else if (filePath.substr(filePath.find_last_of(".") + 1) == "PLY" || filePath.substr(filePath.find_last_of(".") + 1) == "ply") {
         std::cout << "Chargement d'un fichier PLY." << std::endl;
         PlyLoader Plyloader;
         Plyloader.LoadFile(filePath);
         Mesh mesh(Plyloader.GetPoints(), Plyloader.GetFaces());
-        //scene.window();
+        scene.window();
     
         // VÉRIFICATION CRITIQUE : Si la fenêtre n'a pas pu s'ouvrir, on arrête tout pour éviter le crash
-        //if (scene.getwindow() == nullptr) {
-            //std::cerr << "Erreur critique : Impossible d'initialiser la fenêtre ou OpenGL." << std::endl;
-            //return -1;
-        //}
+        if (scene.getwindow() == nullptr) {
+            std::cerr << "Erreur critique : Impossible d'initialiser la fenêtre ou OpenGL." << std::endl;
+            return -1;
+        }
     
-        //scene.draw(mesh.getHalfEdges(), scene.getwindow());
+        scene.draw(mesh.getHalfEdges(), scene.getwindow());
     }
     else if (filePath.substr(filePath.find_last_of(".") + 1) == "obj") {
         std::cout << "Chargement d'un fichier OBJ." << std::endl;
         ObjLoader Objloader;
         Objloader.LoadFile(filePath);
+        std::cout << "Finished loading OBJ file." << std::endl;
         Mesh mesh(Objloader.GetPoints(), Objloader.GetFaces());
-        //scene.window();
+
+        scene.window();
     
         // VÉRIFICATION CRITIQUE : Si la fenêtre n'a pas pu s'ouvrir, on arrête tout pour éviter le crash
-        //if (scene.getwindow() == nullptr) {
-            //std::cerr << "Erreur critique : Impossible d'initialiser la fenêtre ou OpenGL." << std::endl;
-            //return -1;
-        //}
+        if (scene.getwindow() == nullptr) {
+            std::cerr << "Erreur critique : Impossible d'initialiser la fenêtre ou OpenGL." << std::endl;
+            return -1;
+        }
     
-        //scene.draw(mesh.getHalfEdges(), scene.getwindow());
+        scene.draw(mesh.getHalfEdges(), scene.getwindow());
     }
     else {
         std::cerr << "Erreur : Format de fichier non supporté. Seuls les fichiers .ply et .obj sont acceptés." << std::endl;

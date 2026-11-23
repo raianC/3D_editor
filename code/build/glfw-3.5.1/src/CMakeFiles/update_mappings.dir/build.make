@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code
+CMAKE_SOURCE_DIR = /home/nyros-veilteus/Documents/GitHub/3D_editor/code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build
+CMAKE_BINARY_DIR = /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build
 
 # Utility rule file for update_mappings.
 
@@ -67,8 +67,8 @@ include glfw-3.5.1/src/CMakeFiles/update_mappings.dir/compiler_depend.make
 include glfw-3.5.1/src/CMakeFiles/update_mappings.dir/progress.make
 
 glfw-3.5.1/src/CMakeFiles/update_mappings:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
-	cd /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1/src && /usr/bin/cmake -P /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1/CMake/GenerateMappings.cmake mappings.h.in mappings.h
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/nyros-veilteus/Documents/GitHub/3D_editor/code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Updating gamepad mappings from upstream repository"
+	cd /home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1/src && /usr/bin/cmake -P /home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1/CMake/GenerateMappings.cmake mappings.h.in mappings.h
 
 glfw-3.5.1/src/CMakeFiles/update_mappings.dir/codegen:
 .PHONY : glfw-3.5.1/src/CMakeFiles/update_mappings.dir/codegen
@@ -82,10 +82,10 @@ glfw-3.5.1/src/CMakeFiles/update_mappings.dir/build: update_mappings
 .PHONY : glfw-3.5.1/src/CMakeFiles/update_mappings.dir/build
 
 glfw-3.5.1/src/CMakeFiles/update_mappings.dir/clean:
-	cd /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
+	cd /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/src && $(CMAKE_COMMAND) -P CMakeFiles/update_mappings.dir/cmake_clean.cmake
 .PHONY : glfw-3.5.1/src/CMakeFiles/update_mappings.dir/clean
 
 glfw-3.5.1/src/CMakeFiles/update_mappings.dir/depend:
-	cd /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1/src /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/src /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/src/CMakeFiles/update_mappings.dir/DependInfo.cmake "--color=$(COLOR)" update_mappings
+	cd /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nyros-veilteus/Documents/GitHub/3D_editor/code /home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1/src /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/src /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/src/CMakeFiles/update_mappings.dir/DependInfo.cmake "--color=$(COLOR)" update_mappings
 .PHONY : glfw-3.5.1/src/CMakeFiles/update_mappings.dir/depend
 

@@ -3,10 +3,11 @@
 #pragma once
 #include <string>
 #include <vector>
-#include <Eigen>
+#include <eigen3/Eigen/Dense>
 
 class Loader {
     protected:
+        bool Error = false;
         std::vector<Eigen::Vector3d> tabPoint;
         std::vector<std::vector<int>> tabFace;
     public:

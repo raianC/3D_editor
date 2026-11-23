@@ -7,21 +7,16 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/CMakeLists.txt"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/Eigen/CMakeLists.txt"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/Eigen/cmake/Version.in"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/Eigen/unsupported/CMakeLists.txt"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/Eigen/unsupported/Eigen/CMakeLists.txt"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/Eigen/unsupported/Eigen/CXX11/CMakeLists.txt"
+  "/home/nyros-veilteus/Documents/GitHub/3D_editor/code/CMakeLists.txt"
   "CMakeFiles/4.2.3/CMakeCCompiler.cmake"
   "CMakeFiles/4.2.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.2.3/CMakeSystem.cmake"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1/CMake/cmake_uninstall.cmake.in"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1/CMake/glfw3.pc.in"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1/CMake/glfw3Config.cmake.in"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1/CMakeLists.txt"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1/docs/CMakeLists.txt"
-  "/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1/src/CMakeLists.txt"
+  "/home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1/CMake/cmake_uninstall.cmake.in"
+  "/home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1/CMake/glfw3.pc.in"
+  "/home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1/CMake/glfw3Config.cmake.in"
+  "/home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1/CMakeLists.txt"
+  "/home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1/docs/CMakeLists.txt"
+  "/home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1/src/CMakeLists.txt"
   "/usr/share/cmake-4.2/Modules/BasicConfigVersion-SameMajorVersion.cmake.in"
   "/usr/share/cmake-4.2/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c"
@@ -120,6 +115,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-4.2/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
   "/usr/share/cmake-4.2/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
   "/usr/share/cmake-4.2/Modules/FindDoxygen.cmake"
+  "/usr/share/cmake-4.2/Modules/FindFontconfig.cmake"
+  "/usr/share/cmake-4.2/Modules/FindFreetype.cmake"
   "/usr/share/cmake-4.2/Modules/FindOpenGL.cmake"
   "/usr/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-4.2/Modules/FindPackageMessage.cmake"
@@ -149,7 +146,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-4.2/Modules/Platform/Linux-Initialize.cmake"
   "/usr/share/cmake-4.2/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-4.2/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake-4.2/Modules/SelectLibraryConfigurations.cmake"
   "/usr/share/cmake-4.2/Modules/WriteBasicConfigVersionFile.cmake"
+  "/usr/share/eigen3/cmake/Eigen3Config.cmake"
+  "/usr/share/eigen3/cmake/Eigen3ConfigVersion.cmake"
+  "/usr/share/eigen3/cmake/Eigen3Targets.cmake"
   )
 
 # The corresponding makefile is:
@@ -175,11 +176,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "glfw-3.5.1/src/glfw3.pc"
   "glfw-3.5.1/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "glfw-3.5.1/docs/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "Eigen/include/Eigen/Version"
-  "Eigen/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "Eigen/unsupported/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "Eigen/unsupported/Eigen/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "Eigen/unsupported/Eigen/CXX11/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

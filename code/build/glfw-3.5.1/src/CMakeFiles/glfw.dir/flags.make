@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DHAVE_MEMFD_CREATE -D_DEFAULT_SOURCE -D_GLFW_WAYLAND -D_GLFW_X11
 
-C_INCLUDES = -I/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/include -I/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1/include -I/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1/src -I/mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/src
+C_INCLUDES = -I/home/nyros-veilteus/Documents/GitHub/3D_editor/code/include -I/home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1/include -I/home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1/src -I/home/nyros-veilteus/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/src
 
 C_FLAGS = -g -std=c99 -fPIC -Wall
 

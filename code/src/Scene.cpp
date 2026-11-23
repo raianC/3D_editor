@@ -266,6 +266,9 @@ void Scene::mouse_callback(GLFWwindow* window, double xposIn, double yposIn) {
 }
 
 void Scene::window(){
+    //glfwInitHint(GLFW_WAYLAND_LIBDECOR, GLFW_WAYLAND_DISABLE_LIBDECOR);
+    glfwInitHint(GLFW_PLATFORM, GLFW_PLATFORM_X11);
+    
     std::cout << "Debug 1: Avant glfwInit" << std::endl;
     if (!glfwInit()) {
         std::cerr << "Failed to initialize GLFW\n";

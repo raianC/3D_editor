@@ -1,7 +1,7 @@
 //vertex.hpp
 
 #pragma once
-#include <Eigen>
+#include <eigen3/Eigen/Dense>
 
 class HalfEdge;
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code
+CMAKE_SOURCE_DIR = /home/nyros-veilteus/Documents/GitHub/3D_editor/code
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build
+CMAKE_BINARY_DIR = /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include glfw-3.5.1/CMakeFiles/uninstall.dir/compiler_depend.make
 include glfw-3.5.1/CMakeFiles/uninstall.dir/progress.make
 
 glfw-3.5.1/CMakeFiles/uninstall:
-	cd /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1 && /usr/bin/cmake -P /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/cmake_uninstall.cmake
+	cd /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build/glfw-3.5.1 && /usr/bin/cmake -P /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/cmake_uninstall.cmake
 
 glfw-3.5.1/CMakeFiles/uninstall.dir/codegen:
 .PHONY : glfw-3.5.1/CMakeFiles/uninstall.dir/codegen
@@ -81,10 +81,10 @@ glfw-3.5.1/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : glfw-3.5.1/CMakeFiles/uninstall.dir/build
 
 glfw-3.5.1/CMakeFiles/uninstall.dir/clean:
-	cd /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1 && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build/glfw-3.5.1 && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : glfw-3.5.1/CMakeFiles/uninstall.dir/clean
 
 glfw-3.5.1/CMakeFiles/uninstall.dir/depend:
-	cd /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/glfw-3.5.1 /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1 /mnt/c/Users/ghost/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)" uninstall
+	cd /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nyros-veilteus/Documents/GitHub/3D_editor/code /home/nyros-veilteus/Documents/GitHub/3D_editor/code/glfw-3.5.1 /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build/glfw-3.5.1 /home/nyros-veilteus/Documents/GitHub/3D_editor/code/build/glfw-3.5.1/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)" uninstall
 .PHONY : glfw-3.5.1/CMakeFiles/uninstall.dir/depend
 
